@@ -113,6 +113,10 @@ h1, h2, h3 {
     border-bottom: 1px solid rgba(18, 18, 18, 0.08);
 }
 
+.navbar.scrolled .nav-links a {
+    color: var(--text-nav); /* Transitions to black on scroll */
+}
+
 .nav-container {
     max-width: 1280px;
     margin: 0 auto;
@@ -140,9 +144,8 @@ h1, h2, h3 {
 }
 
 .nav-links a {
-    color: var(--text-nav);
+    color: #ffffff; /* White text on dark header image background */
     text-decoration: none;
-    font-size: 0.95rem;
     font-weight: 500;
     position: relative;
     padding: 8px 0;
@@ -926,6 +929,10 @@ h1, h2, h3 {
         gap: 20px;
         border-bottom: 1px solid rgba(18, 18, 18, 0.08);
         box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    }
+    
+    .nav-links a {
+        color: var(--text-nav); /* Ensure dropdown links are black on mobile */
     }
     
     .nav-links.active {
