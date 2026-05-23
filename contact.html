@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Get in touch with Hope Beyond Disability. Send us a message, ask questions, or inquire about volunteering.">
+    <title>Contact Us - Hope Beyond Disability</title>
+    <!-- Google Fonts: Outfit and Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@500;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .form-group {
+            margin-bottom: 20px;
+        }
+        .form-label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 500;
+            font-size: 0.95rem;
+            color: var(--text-dark);
+        }
+        .form-input, .form-select, .form-textarea {
+            width: 100%;
+            padding: 12px 16px;
+            border: 1px solid rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            font-family: var(--font-body);
+            font-size: 1rem;
+            color: var(--text-dark);
+            background: #fff;
+            transition: border-color 0.3s ease, box-shadow 0.3s ease;
+        }
+        .form-input:focus, .form-select:focus, .form-textarea:focus {
+            outline: none;
+            border-color: var(--primary-red);
+            box-shadow: 0 0 0 3px rgba(211, 47, 47, 0.15);
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <header class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo-link">
+                <img src="assets/hbd_logo.png" alt="Hope Beyond Disability Logo" class="logo">
+            </a>
+            <nav class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="about.html">About Us</a>
+                <a href="programs.html">Programs</a>
+                <a href="partnerships.html">Partnerships</a>
+                <a href="donate.html">Donate</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+            <div class="mobile-menu-btn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <h1>Contact Us</h1>
+        <p>Do you have questions, feedback, or inquiries about our programs? Fill out the form below or reach out directly via call/email.</p>
+    </section>
+
+    <!-- Page Content -->
+    <main class="page-content-wrapper" style="color: var(--text-dark);">
+        <div style="display: grid; grid-template-columns: 1fr 1.2fr; gap: 60px; align-items: start;">
+            <!-- Left Info Panel -->
+            <div style="line-height: 1.8;">
+                <h2 style="font-family: var(--font-heading); font-size: 2rem; margin-bottom: 20px; color: var(--text-dark);">Get in Touch Directly</h2>
+                <p style="font-size: 1.1rem; color: var(--text-muted-dark); margin-bottom: 30px;">
+                    We would love to hear from you. Feel free to contact our support desk or schedule a visit to our community center.
+                </p>
+                <div style="display: flex; flex-direction: column; gap: 20px;">
+                    <div style="display: flex; align-items: center; gap: 16px;">
+                        <div style="width: 44px; height: 44px; background: rgba(211, 47, 47, 0.08); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: var(--primary-red);">
+                            <i data-lucide="phone"></i>
+                        </div>
+                        <div>
+                            <strong style="display: block; font-size: 0.9rem; color: var(--text-muted-dark);">Call or WhatsApp</strong>
+                            <span style="font-size: 1.05rem; color: var(--text-dark); font-weight: 500;">+256 700 000 000</span>
+                        </div>
+                    </div>
+                    <div style="display: flex; align-items: center; gap: 16px;">
+                        <div style="width: 44px; height: 44px; background: rgba(251, 192, 45, 0.12); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: var(--primary-gold);">
+                            <i data-lucide="mail"></i>
+                        </div>
+                        <div>
+                            <strong style="display: block; font-size: 0.9rem; color: var(--text-muted-dark);">Official Email</strong>
+                            <span style="font-size: 1.05rem; color: var(--text-dark); font-weight: 500;">info@hopebeyonddisability.org</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Form Panel -->
+            <div style="background: var(--light-bg-1); padding: 40px; border-radius: 20px; border: 1px solid rgba(0,0,0,0.05);">
+                <h2 style="font-family: var(--font-heading); font-size: 1.8rem; margin-bottom: 25px; color: var(--text-dark);">Send a Message</h2>
+                <form id="contactForm" action="#" method="POST">
+                    <div class="form-group">
+                        <label for="fullName" class="form-label">Full Name</label>
+                        <input type="text" id="fullName" class="form-input" placeholder="Your full name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email" class="form-label">Email Address</label>
+                        <input type="email" id="email" class="form-input" placeholder="Your email address" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone" class="form-label">Phone Number (Optional)</label>
+                        <input type="tel" id="phone" class="form-input" placeholder="Your phone number">
+                    </div>
+                    <div class="form-group">
+                        <label for="subject" class="form-label">Subject</label>
+                        <select id="subject" class="form-select" required>
+                            <option value="">Select a topic...</option>
+                            <option value="General">General Inquiry</option>
+                            <option value="Volunteer">Volunteer Opportunities</option>
+                            <option value="Partnership">Partnership Proposal</option>
+                            <option value="Donation">Donation Inquiry</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="message" class="form-label">Message</label>
+                        <textarea id="message" class="form-textarea" rows="5" placeholder="How can we help you?" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-solid" style="width: 100%; border: none; font-size: 1.05rem;">Submit Message</button>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer" id="contact">
+        <div class="footer-container">
+            <div class="footer-brand-col">
+                <a href="index.html" class="logo-link">
+                    <img src="assets/hbd_logo.png" alt="Hope Beyond Disability Logo" class="footer-logo">
+                </a>
+                <p class="footer-mission">Building compassionate communities where every child is valued and every caregiver is supported.</p>
+            </div>
+            <div class="footer-nav-col">
+                <h4 class="footer-title">Quick Links</h4>
+                <ul class="footer-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="programs.html">Programs</a></li>
+                    <li><a href="partnerships.html">Partnerships</a></li>
+                    <li><a href="donate.html">Donate</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-contact-col">
+                <h4 class="footer-title">Contact Us</h4>
+                <div class="footer-contact">
+                    <div class="contact-item">
+                        <i data-lucide="phone" style="width:18px; height:18px;"></i>
+                        <span>+256 700 000 000</span>
+                    </div>
+                    <div class="contact-item">
+                        <i data-lucide="mail" style="width:18px; height:18px;"></i>
+                        <span>info@hopebeyonddisability.org</span>
+                    </div>
+                </div>
+                <div class="footer-socials">
+                    <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Facebook">
+                        <i data-lucide="facebook" style="width:18px; height:18px;"></i>
+                    </a>
+                    <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Instagram">
+                        <i data-lucide="instagram" style="width:18px; height:18px;"></i>
+                    </a>
+                    <a href="https://tiktok.com" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="TikTok">
+                        <i data-lucide="music" style="width:18px; height:18px;"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p class="footer-copy">&copy; 2026 Hope Beyond Disability. All Rights Reserved.</p>
+            <div class="footer-legal">
+                <a href="privacy.html">Privacy Policy</a>
+                <a href="safeguarding.html">Child Protection & Safeguarding Policy</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Lucide Icons script -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>
+        lucide.createIcons();
+
+        // Mobile Navigation Toggle
+        const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+        const navLinks = document.querySelector('.nav-links');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            mobileMenuBtn.classList.toggle('open');
+        });
+
+        // Pre-fill Subject field based on URL Search Parameters
+        document.addEventListener('DOMContentLoaded', () => {
+            const urlParams = new URLSearchParams(window.location.search);
+            const subjectParam = urlParams.get('subject');
+            if (subjectParam) {
+                const subjectSelect = document.getElementById('subject');
+                // Loop through options and find matching value case-insensitively
+                for (let i = 0; i < subjectSelect.options.length; i++) {
+                    if (subjectSelect.options[i].value.toLowerCase() === subjectParam.toLowerCase()) {
+                        subjectSelect.selectedIndex = i;
+                        break;
+                    }
+                }
+            }
+        });
+    </script>
+</body>
+</html>
