@@ -41,20 +41,20 @@
     </section>
 
     <!-- Page Content -->
-    <main class="page-content-wrapper" style="color: var(--text-dark); line-height: 1.8;">
-        <div style="margin-bottom: 40px;">
-            <h2 style="font-family: var(--font-heading); font-size: 1.8rem; margin-bottom: 16px; color: var(--text-dark);">1. Purpose and Scope</h2>
-            <p style="color: var(--text-muted-dark);">
+    <main class="page-content-wrapper">
+        <div class="content-section">
+            <h2>1. Purpose and Scope</h2>
+            <p>
                 Children living with disabilities are among the most vulnerable groups in society. They face an elevated risk of abuse, neglect, exploitation, and discrimination. This Child Protection & Safeguarding Policy establishes binding behavioral codes for all staff, volunteers, partners, and visitors associated with Hope Beyond Disability (HBD).
             </p>
         </div>
 
-        <div style="margin-bottom: 40px;">
-            <h2 style="font-family: var(--font-heading); font-size: 1.8rem; margin-bottom: 16px; color: var(--text-dark);">2. Core Safeguarding Principles</h2>
-            <p style="color: var(--text-muted-dark); margin-bottom: 12px;">
+        <div class="content-section">
+            <h2>2. Core Safeguarding Principles</h2>
+            <p>
                 Our safeguarding measures are built on the following primary commitments:
             </p>
-            <ul style="padding-left: 20px; color: var(--text-muted-dark); margin-bottom: 12px; display: flex; flex-direction: column; gap: 10px;">
+            <ul class="program-list">
                 <li><strong>Zero Tolerance for Abuse:</strong> We maintain strict zero-tolerance for any physical, emotional, sexual, or verbal abuse, exploitation, or systemic neglect of children.</li>
                 <li><strong>Informed Consent:</strong> Caregiver and parental consent are mandatory before taking photos, recording videos, or utilizing case studies of any child in our programs.</li>
                 <li><strong>Equal Protection:</strong> Every child—regardless of gender, ethnicity, religion, or type of developmental/physical disability—has an equal right to absolute protection from harm.</li>
@@ -62,22 +62,22 @@
             </ul>
         </div>
 
-        <div style="margin-bottom: 40px;">
-            <h2 style="font-family: var(--font-heading); font-size: 1.8rem; margin-bottom: 16px; color: var(--text-dark);">3. Staff & Volunteer Codes of Conduct</h2>
-            <p style="color: var(--text-muted-dark); margin-bottom: 12px;">
+        <div class="content-section">
+            <h2>3. Staff & Volunteer Codes of Conduct</h2>
+            <p>
                 All representatives of Hope Beyond Disability must:
             </p>
-            <ul style="padding-left: 20px; color: var(--text-muted-dark); display: flex; flex-direction: column; gap: 10px;">
+            <ul class="program-list">
                 <li>Treat all children with deep respect and avoid any behavior that could be construed as discriminatory or degrading.</li>
                 <li>Avoid spending time alone with a child behind closed doors. All sessions, playtimes, and assessments must be held in visible, open communal areas.</li>
                 <li>Report any suspicions of child abuse, child neglect, or safety infractions immediately to the designated HBD Safeguarding Officer.</li>
             </ul>
         </div>
 
-        <div>
-            <h2 style="font-family: var(--font-heading); font-size: 1.8rem; margin-bottom: 16px; color: var(--text-dark);">4. Reporting and Accountability</h2>
-            <p style="color: var(--text-muted-dark);">
-                Any individual who suspects or receives a report of abuse or safeguarding violation must report it within 24 hours. Suspicions or reports can be filed confidentially via email to <a href="mailto:safeguarding@hopebeyonddisability.org" style="color: var(--primary-red); text-decoration: none; font-weight: 500;">safeguarding@hopebeyonddisability.org</a>. We coordinate with local community leaders and child protective law enforcement to take immediate remedial actions.
+        <div class="content-section">
+            <h2>4. Reporting and Accountability</h2>
+            <p>
+                Any individual who suspects or receives a report of abuse or safeguarding violation must report it within 24 hours. Suspicions or reports can be filed confidentially via email to <a href="mailto:safeguarding@hopebeyonddisability.org">safeguarding@hopebeyonddisability.org</a>. We coordinate with local community leaders and child protective law enforcement to take immediate remedial actions.
             </p>
         </div>
     </main>
@@ -140,6 +140,16 @@
     <script src="https://unpkg.com/lucide@latest"></script>
     <script>
         lucide.createIcons();
+
+        // Sticky Navbar Effect
+        window.addEventListener('scroll', () => {
+            const navbar = document.querySelector('.navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
 
         // Mobile Navigation Toggle
         const mobileMenuBtn = document.querySelector('.mobile-menu-btn');

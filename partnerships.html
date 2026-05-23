@@ -35,39 +35,40 @@
     </header>
 
     <!-- Page Header -->
-    <section class="page-header">
+    <section class="page-header" style="background-image: url('assets/advocacy_meeting.png');">
         <h1>Partner With Us</h1>
         <p>No organization can solve societal exclusion alone. We partner with local churches, medical clinics, schools, and corporate sponsors to build robust community support systems.</p>
     </section>
 
     <!-- Page Content -->
-    <main class="page-content-wrapper" style="color: var(--text-dark);">
-        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 40px; margin-bottom: 60px; line-height: 1.8;">
-            <div>
-                <h2 style="font-family: var(--font-heading); font-size: 2rem; margin-bottom: 20px; color: var(--text-dark);">Partnership Pathways</h2>
-                <p style="font-size: 1.1rem; color: var(--text-muted-dark); margin-bottom: 24px;">
+    <main class="page-content-wrapper">
+        <div class="grid-2col">
+            <!-- Left Panel -->
+            <div class="content-section">
+                <h2>Partnership Pathways</h2>
+                <p>
                     We believe in synergetic relationships where our community outreach combined with your resources, specialized skills, or platforms creates lasting change.
                 </p>
-                <div style="display: flex; flex-direction: column; gap: 24px;">
-                    <div style="background: var(--light-bg-1); padding: 24px; border-radius: 12px; border-left: 4px solid var(--primary-gold);">
-                        <strong style="color: var(--text-dark); font-size: 1.15rem; display: block; margin-bottom: 6px;">Church & Ministry Partners</strong>
+                <div class="flex-flow-col">
+                    <div class="value-card">
+                        <strong>Church & Ministry Partners</strong>
                         Collaborate on family discipleship cells, host counselor support seminars, or co-organize faith-based fellowship outreach programs.
                     </div>
-                    <div style="background: var(--light-bg-1); padding: 24px; border-radius: 12px; border-left: 4px solid var(--primary-red);">
-                        <strong style="color: var(--text-dark); font-size: 1.15rem; display: block; margin-bottom: 6px;">Medical & Clinical Partners</strong>
+                    <div class="value-card red-border">
+                        <strong>Medical & Clinical Partners</strong>
                         Help provide basic screenings, occupational therapy recommendations, or distribute mobility/educational aids to children living with disabilities.
                     </div>
-                    <div style="background: var(--light-bg-1); padding: 24px; border-radius: 12px; border-left: 4px solid var(--primary-gold);">
-                        <strong style="color: var(--text-dark); font-size: 1.15rem; display: block; margin-bottom: 6px;">Corporate & Philanthropic Sponsors</strong>
+                    <div class="value-card">
+                        <strong>Corporate & Philanthropic Sponsors</strong>
                         Fund our livelihood skills training projects, provide business startup grants for caregivers, or support public civic advocacy campaigns.
                     </div>
                 </div>
             </div>
 
             <!-- Registration Callout -->
-            <div style="background: var(--light-bg-2); padding: 40px; border-radius: 20px; border: 1px solid rgba(0,0,0,0.05); display: flex; flex-direction: column; justify-content: center;">
-                <h2 style="font-family: var(--font-heading); font-size: 1.8rem; margin-bottom: 20px; color: var(--text-dark);">Start a Conversation</h2>
-                <p style="font-size: 1.05rem; color: var(--text-muted-dark); margin-bottom: 30px;">
+            <div class="form-card" style="background: var(--light-bg-2); justify-content: center;">
+                <h2>Start a Conversation</h2>
+                <p>
                     Are you ready to explore how your group or business can collaborate with Hope Beyond Disability? Get in touch with our partnerships director today to schedule a virtual planning session or physical meet-up.
                 </p>
                 <a href="contact.html?subject=Partnership" class="btn btn-solid" style="display: inline-block; text-align: center; text-decoration: none;">Get In Touch to Partner</a>
@@ -133,6 +134,16 @@
     <script src="https://unpkg.com/lucide@latest"></script>
     <script>
         lucide.createIcons();
+
+        // Sticky Navbar Effect
+        window.addEventListener('scroll', () => {
+            const navbar = document.querySelector('.navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
 
         // Mobile Navigation Toggle
         const mobileMenuBtn = document.querySelector('.mobile-menu-btn');

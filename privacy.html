@@ -41,35 +41,35 @@
     </section>
 
     <!-- Page Content -->
-    <main class="page-content-wrapper" style="color: var(--text-dark); line-height: 1.8;">
-        <div style="margin-bottom: 40px;">
-            <h2 style="font-family: var(--font-heading); font-size: 1.8rem; margin-bottom: 16px; color: var(--text-dark);">1. Overview</h2>
-            <p style="color: var(--text-muted-dark);">
+    <main class="page-content-wrapper">
+        <div class="content-section">
+            <h2>1. Overview</h2>
+            <p>
                 Hope Beyond Disability is committed to protecting the privacy of our donors, partners, volunteers, and beneficiaries. This Privacy Policy details our practices concerning data collection, protection, and usage through our online platform and physical outreach operations.
             </p>
         </div>
 
-        <div style="margin-bottom: 40px;">
-            <h2 style="font-family: var(--font-heading); font-size: 1.8rem; margin-bottom: 16px; color: var(--text-dark);">2. Information Collection</h2>
-            <p style="color: var(--text-muted-dark); margin-bottom: 12px;">
+        <div class="content-section">
+            <h2>2. Information Collection</h2>
+            <p>
                 We may collect personal details when you engage with us, including:
             </p>
-            <ul style="padding-left: 20px; color: var(--text-muted-dark); margin-bottom: 12px;">
+            <ul class="program-list">
                 <li>Contact details (name, email address, phone number).</li>
                 <li>Donation details (records of financial support and gift preferences).</li>
                 <li>Communications (records of inquiry emails, form submissions, and feedback).</li>
             </ul>
-            <p style="color: var(--text-muted-dark);">
+            <p>
                 We do NOT store credit card numbers, bank credentials, or mobile money PINs on our website. All electronic payments are processed securely via verified third-party gateways.
             </p>
         </div>
 
-        <div style="margin-bottom: 40px;">
-            <h2 style="font-family: var(--font-heading); font-size: 1.8rem; margin-bottom: 16px; color: var(--text-dark);">3. Data Utilization</h2>
-            <p style="color: var(--text-muted-dark); margin-bottom: 12px;">
+        <div class="content-section">
+            <h2>3. Data Utilization</h2>
+            <p>
                 Your information is used solely to:
             </p>
-            <ul style="padding-left: 20px; color: var(--text-muted-dark);">
+            <ul class="program-list">
                 <li>Acknowledge and process your donations and partnerships.</li>
                 <li>Provide operational updates, news, and ministry reports.</li>
                 <li>Respond to feedback, comments, and volunteer applications.</li>
@@ -77,17 +77,17 @@
             </ul>
         </div>
 
-        <div style="margin-bottom: 40px;">
-            <h2 style="font-family: var(--font-heading); font-size: 1.8rem; margin-bottom: 16px; color: var(--text-dark);">4. Data Safeguarding</h2>
-            <p style="color: var(--text-muted-dark);">
+        <div class="content-section">
+            <h2>4. Data Safeguarding</h2>
+            <p>
                 We implement top-tier technical and administrative security measures to prevent unauthorized access, alternation, disclosure, or destruction of your personal data. We never sell, trade, or rent personal information to external commercial third parties.
             </p>
         </div>
 
-        <div>
-            <h2 style="font-family: var(--font-heading); font-size: 1.8rem; margin-bottom: 16px; color: var(--text-dark);">5. Contact Information</h2>
-            <p style="color: var(--text-muted-dark);">
-                If you have questions about this policy or request deletion/rectification of your data, please contact us at <a href="mailto:info@hopebeyonddisability.org" style="color: var(--primary-red); text-decoration: none; font-weight: 500;">info@hopebeyonddisability.org</a>.
+        <div class="content-section">
+            <h2>5. Contact Information</h2>
+            <p>
+                If you have questions about this policy or request deletion/rectification of your data, please contact us at <a href="mailto:info@hopebeyonddisability.org">info@hopebeyonddisability.org</a>.
             </p>
         </div>
     </main>
@@ -150,6 +150,16 @@
     <script src="https://unpkg.com/lucide@latest"></script>
     <script>
         lucide.createIcons();
+
+        // Sticky Navbar Effect
+        window.addEventListener('scroll', () => {
+            const navbar = document.querySelector('.navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
 
         // Mobile Navigation Toggle
         const mobileMenuBtn = document.querySelector('.mobile-menu-btn');

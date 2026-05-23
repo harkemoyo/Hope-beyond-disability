@@ -10,34 +10,6 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700&family=Roboto+Slab:wght@300;400;500;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <style>
-        .form-group {
-            margin-bottom: 20px;
-        }
-        .form-label {
-            display: block;
-            margin-bottom: 8px;
-            font-weight: 500;
-            font-size: 0.95rem;
-            color: var(--text-dark);
-        }
-        .form-input, .form-select, .form-textarea {
-            width: 100%;
-            padding: 12px 16px;
-            border: 1px solid rgba(0, 0, 0, 0.1);
-            border-radius: 8px;
-            font-family: var(--font-body);
-            font-size: 1rem;
-            color: var(--text-dark);
-            background: #fff;
-            transition: border-color 0.3s ease, box-shadow 0.3s ease;
-        }
-        .form-input:focus, .form-select:focus, .form-textarea:focus {
-            outline: none;
-            border-color: var(--primary-red);
-            box-shadow: 0 0 0 3px rgba(211, 47, 47, 0.15);
-        }
-    </style>
 </head>
 <body>
     <!-- Navbar -->
@@ -63,46 +35,46 @@
     </header>
 
     <!-- Page Header -->
-    <section class="page-header">
+    <section class="page-header" style="background-image: url('assets/awareness_workshop.png');">
         <h1>Contact Us</h1>
         <p>Do you have questions, feedback, or inquiries about our programs? Fill out the form below or reach out directly via call/email.</p>
     </section>
 
     <!-- Page Content -->
-    <main class="page-content-wrapper" style="color: var(--text-dark);">
-        <div style="display: grid; grid-template-columns: 1fr 1.2fr; gap: 60px; align-items: start;">
+    <main class="page-content-wrapper">
+        <div class="grid-2col-wide">
             <!-- Left Info Panel -->
-            <div style="line-height: 1.8;">
-                <h2 style="font-family: var(--font-heading); font-size: 2rem; margin-bottom: 20px; color: var(--text-dark);">Get in Touch Directly</h2>
-                <p style="font-size: 1.1rem; color: var(--text-muted-dark); margin-bottom: 30px;">
+            <div class="content-section">
+                <h2>Get in Touch Directly</h2>
+                <p>
                     We would love to hear from you. Feel free to contact our support desk or schedule a visit to our community center.
                 </p>
-                <div style="display: flex; flex-direction: column; gap: 20px;">
+                <div class="flex-flow-col">
                     <div style="display: flex; align-items: center; gap: 16px;">
-                        <div style="width: 44px; height: 44px; background: rgba(211, 47, 47, 0.08); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: var(--primary-red);">
+                        <div class="icon-bubble">
                             <i data-lucide="phone"></i>
                         </div>
                         <div>
-                            <strong style="display: block; font-size: 0.9rem; color: var(--text-muted-dark);">Call or WhatsApp</strong>
-                            <span style="font-size: 1.05rem; color: var(--text-dark); font-weight: 500;">+256 700 000 000</span>
+                            <strong style="display: block; font-size: 1.36rem; color: var(--text-muted-dark);">Call or WhatsApp</strong>
+                            <span style="font-size: 1.6rem; color: var(--text-dark); font-weight: 500;">+256 700 000 000</span>
                         </div>
                     </div>
                     <div style="display: flex; align-items: center; gap: 16px;">
-                        <div style="width: 44px; height: 44px; background: rgba(251, 192, 45, 0.12); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: var(--primary-gold);">
+                        <div class="icon-bubble gold">
                             <i data-lucide="mail"></i>
                         </div>
                         <div>
-                            <strong style="display: block; font-size: 0.9rem; color: var(--text-muted-dark);">Official Email</strong>
-                            <span style="font-size: 1.05rem; color: var(--text-dark); font-weight: 500;">info@hopebeyonddisability.org</span>
+                            <strong style="display: block; font-size: 1.36rem; color: var(--text-muted-dark);">Official Email</strong>
+                            <span style="font-size: 1.6rem; color: var(--text-dark); font-weight: 500;">info@hopebeyonddisability.org</span>
                         </div>
                     </div>
                 </div>
             </div>
 
             <!-- Right Form Panel -->
-            <div style="background: var(--light-bg-1); padding: 40px; border-radius: 20px; border: 1px solid rgba(0,0,0,0.05);">
-                <h2 style="font-family: var(--font-heading); font-size: 1.8rem; margin-bottom: 25px; color: var(--text-dark);">Send a Message</h2>
-                <form id="contactForm" action="#" method="POST">
+            <div class="form-card">
+                <h2>Send a Message</h2>
+                <form id="contactForm" class="form-container" action="#" method="POST">
                     <div class="form-group">
                         <label for="fullName" class="form-label">Full Name</label>
                         <input type="text" id="fullName" class="form-input" placeholder="Your full name" required>
@@ -129,7 +101,7 @@
                         <label for="message" class="form-label">Message</label>
                         <textarea id="message" class="form-textarea" rows="5" placeholder="How can we help you?" required></textarea>
                     </div>
-                    <button type="submit" class="btn btn-solid" style="width: 100%; border: none; font-size: 1.05rem;">Submit Message</button>
+                    <button type="submit" class="btn btn-solid" style="width: 100%; border: none; font-size: 1.6rem;">Submit Message</button>
                 </form>
             </div>
         </div>
@@ -194,6 +166,16 @@
     <script>
         lucide.createIcons();
 
+        // Sticky Navbar Effect
+        window.addEventListener('scroll', () => {
+            const navbar = document.querySelector('.navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+
         // Mobile Navigation Toggle
         const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
         const navLinks = document.querySelector('.nav-links');
@@ -209,7 +191,6 @@
             const subjectParam = urlParams.get('subject');
             if (subjectParam) {
                 const subjectSelect = document.getElementById('subject');
-                // Loop through options and find matching value case-insensitively
                 for (let i = 0; i < subjectSelect.options.length; i++) {
                     if (subjectSelect.options[i].value.toLowerCase() === subjectParam.toLowerCase()) {
                         subjectSelect.selectedIndex = i;
