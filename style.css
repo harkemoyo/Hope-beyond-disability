@@ -123,9 +123,10 @@ h1, h2, h3 {
 }
 
 .logo {
-    max-width: 200px;
+    max-width: 280px;
     height: auto;
     display: block;
+    mix-blend-mode: multiply;
     transition: transform var(--transition-speed) ease;
 }
 
@@ -899,7 +900,7 @@ h1, h2, h3 {
 
 @media (max-width: 768px) {
     .navbar {
-        background: rgba(10, 25, 47, 0.95);
+        background: rgba(250, 248, 245, 0.98);
         padding: 16px 0;
     }
     
@@ -918,13 +919,13 @@ h1, h2, h3 {
         top: 60px;
         left: -24px;
         right: -24px;
-        background: rgba(10, 25, 47, 0.98);
+        background: rgba(250, 248, 245, 0.98);
         backdrop-filter: blur(10px);
         flex-direction: column;
         padding: 30px 24px;
         gap: 20px;
-        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        border-bottom: 1px solid rgba(18, 18, 18, 0.08);
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
     }
     
     .nav-links.active {
