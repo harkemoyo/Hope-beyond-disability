@@ -135,8 +135,12 @@ h1, h2, h3 {
     max-width: 180px;
     height: auto;
     display: block;
-    mix-blend-mode: multiply;
     transition: transform var(--transition-speed) ease;
+}
+
+/* Apply multiply blend only when navbar has scrolled white background */
+.navbar.scrolled .logo {
+    mix-blend-mode: multiply;
 }
 
 .logo:hover {
@@ -910,6 +914,25 @@ h1, h2, h3 {
     .navbar {
         background: rgba(250, 248, 245, 0.98);
         padding: 16px 0;
+    }
+
+    /* Keep transparent on mobile too for hero pages */
+    .navbar.navbar-transparent {
+        background: transparent;
+    }
+
+    /* Hamburger is white on transparent dark hero pages */
+    .navbar.navbar-transparent .mobile-menu-btn span {
+        background-color: #ffffff;
+    }
+
+    /* Once scrolled, it becomes opaque regardless */
+    .navbar.navbar-transparent.scrolled {
+        background: rgba(250, 248, 245, 0.98);
+    }
+
+    .navbar.navbar-transparent.scrolled .mobile-menu-btn span {
+        background-color: var(--text-nav);
     }
     
     .nav-container {
