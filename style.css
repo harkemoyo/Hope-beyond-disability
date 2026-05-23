@@ -81,6 +81,8 @@ body {
 
 main {
     grid-row: 3;
+    display: flex;
+    flex-direction: column;
 }
 
 .footer {
@@ -366,7 +368,7 @@ h1, h2, h3 {
 .why-it-matters {
     background-color: var(--light-bg-1);
     color: var(--text-dark);
-    padding: 100px 24px;
+    padding: 80px 24px;
 }
 
 .section-text-col {
@@ -402,8 +404,7 @@ h1, h2, h3 {
 .programs-section {
     background-color: var(--light-bg-1);
     color: var(--text-dark);
-    padding: 100px 24px;
-    border-bottom: 1px solid rgba(18, 18, 18, 0.05);
+    padding: 80px 24px;
     display: flex;
     flex-direction: column;
     gap: 60px;
@@ -533,7 +534,7 @@ h1, h2, h3 {
 .identity-section {
     background-color: var(--light-bg-2);
     color: var(--text-dark);
-    padding: 100px 24px;
+    padding: 80px 24px;
 }
 
 .identity-section .section-text-col h2 {
@@ -640,8 +641,7 @@ h1, h2, h3 {
 .cta-section {
     background-color: var(--bg-secondary);
     color: var(--text-dark);
-    padding: 100px 24px;
-    border-bottom: 1px solid rgba(18, 18, 18, 0.05);
+    padding: 80px 24px;
     display: flex;
     flex-direction: column;
     gap: 60px;
@@ -977,7 +977,7 @@ h1, h2, h3 {
     }
     
     .why-it-matters, .programs-section, .identity-section, .cta-section {
-        padding: 70px 24px;
+        padding: 60px 24px;
     }
     
     .programs-grid, .cta-grid {
