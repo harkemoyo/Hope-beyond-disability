@@ -1423,5 +1423,280 @@ h1, h2, h3 {
 .icon-bubble.gold {
     background: rgba(251, 192, 45, 0.12);
     color: var(--primary-gold);
+    border-color: var(--primary-gold);
 }
+
+/* Scroll Offset for Fixed Navbar Target Anchors */
+section[id] {
+    scroll-margin-top: 100px;
+}
+
+/* Logo Tagline Styles */
+.logo-link {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-decoration: none;
+    gap: 2px;
+}
+
+.logo-tagline {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--text-muted-dark);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    transition: color var(--transition-speed) ease;
+}
+
+.navbar.navbar-transparent .logo-tagline {
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.navbar.scrolled .logo-tagline,
+.navbar:not(.navbar-transparent) .logo-tagline {
+    color: var(--text-muted-dark);
+}
+
+/* Responsive Table Wrapper for Donate Page */
+.table-responsive {
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    border: 1px solid rgba(18, 18, 18, 0.05);
+}
+
+/* Contact Details Card Block */
+.contact-details-card {
+    background: var(--light-bg-1);
+    border: 1px solid rgba(18, 18, 18, 0.05);
+    border-radius: 12px;
+    padding: 30px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.02);
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    width: 100%;
+}
+
+/* Team Grid and Card Components */
+.team-section {
+    padding: 80px 24px;
+    background: var(--light-bg-2);
+    text-align: center;
+    border-top: 1px solid rgba(18, 18, 18, 0.05);
+}
+
+.team-section h2 {
+    font-size: clamp(3.2rem, 3.5vw, 4.4rem);
+    margin-bottom: 12px;
+    color: var(--text-dark);
+}
+
+.team-section p {
+    font-size: 1.76rem;
+    color: var(--text-muted-dark);
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
+    max-width: 1280px;
+    margin: 48px auto 0 auto;
+}
+
+.team-card {
+    background: var(--bg-secondary);
+    border: 1px solid rgba(18, 18, 18, 0.08);
+    border-radius: 16px;
+    padding: 36px 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.02);
+    transition: transform var(--transition-speed) ease, box-shadow var(--transition-speed) ease;
+}
+
+.team-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.05);
+}
+
+.team-avatar {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background: rgba(211, 47, 47, 0.08);
+    color: var(--primary-red);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--font-heading);
+    font-size: 2.4rem;
+    font-weight: 700;
+    border: 2px solid var(--primary-red);
+}
+
+.team-avatar.gold {
+    background: rgba(251, 192, 45, 0.12);
+    color: var(--primary-gold);
+    border-color: var(--primary-gold);
+}
+
+.team-name {
+    font-size: 1.84rem;
+    font-weight: 600;
+    color: var(--text-dark);
+}
+
+.team-role {
+    font-size: 1.44rem;
+    color: var(--text-muted-dark);
+    font-weight: 500;
+}
+
+/* FAQ Accordion Styling */
+.faq-section {
+    padding: 80px 24px;
+    background: var(--light-bg-2);
+    border-top: 1px solid rgba(18, 18, 18, 0.05);
+}
+
+.faq-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.faq-title {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: clamp(2.8rem, 3.5vw, 4rem);
+    font-weight: 700;
+}
+
+.faq-item {
+    border-bottom: 1px solid rgba(18, 18, 18, 0.08);
+    padding: 20px 0;
+}
+
+.faq-question {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.76rem;
+    font-weight: 600;
+    color: var(--text-dark);
+    cursor: pointer;
+    user-select: none;
+    gap: 12px;
+}
+
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s cubic-bezier(0, 1, 0, 1);
+    font-size: 1.52rem;
+    color: var(--text-muted-dark);
+    line-height: 1.6;
+    margin-top: 0;
+}
+
+.faq-item.active .faq-answer {
+    max-height: 1000px;
+    transition: max-height 0.3s cubic-bezier(0.9, 0, 0.8, 0.2);
+    margin-top: 12px;
+}
+
+.faq-icon {
+    transition: transform 0.3s ease;
+    flex-shrink: 0;
+}
+
+.faq-item.active .faq-icon {
+    transform: rotate(180deg);
+}
+
+/* Additional Layout Spacers */
+.flex-flow-col {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Mobile Media Queries Overrides */
+@media (max-width: 768px) {
+    .logo {
+        max-width: 130px; /* Reduced mobile size to prevent overcrowding */
+    }
+    
+    .logo-tagline {
+        font-size: 0.8rem; /* Scaled down tagline text on mobile */
+        letter-spacing: 0.05em;
+    }
+
+    .hero-title {
+        font-size: clamp(2.4rem, 5vw, 3.6rem); /* Reduced mobile font-size to prevent word-by-word stacking */
+    }
+
+    .hero-cta-group {
+        flex-direction: column;
+        width: 100%;
+        max-width: 320px;
+        gap: 12px; /* Spacing between stacked CTA buttons */
+    }
+
+    .hero-cta-group .btn {
+        width: 100%;
+    }
+
+    .program-card img {
+        max-width: 100%;
+    }
+    
+    .list-item-card {
+        display: flex;
+        gap: 16px;
+        align-items: flex-start;
+        padding: 16px; /* Preserve left padding for list-item alignment */
+    }
+
+    .value-card {
+        padding: 20px 16px; /* Spacing cards and text padding on mobile */
+    }
+
+    .values-grid {
+        grid-template-columns: 1fr;
+        gap: 20px; /* Space between core values list items */
+    }
+
+    .team-grid {
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+
+    .section-image {
+        max-height: 280px; /* Height cap for program images on mobile */
+        width: 100%;
+        object-fit: cover;
+    }
+
+    .program-list {
+        padding-left: 24px; /* Fix bullet dots appearing outside screen edge */
+    }
+
+    .why-it-matters, .identity-section {
+        border-bottom: 1px solid rgba(18, 18, 18, 0.05); /* Separators between programs on mobile */
+    }
+
+    .btn-cta {
+        margin-bottom: 12px; /* Bottom margin for partnerships/cta buttons on mobile */
+    }
+}
+
 
