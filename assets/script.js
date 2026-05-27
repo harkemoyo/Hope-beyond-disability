@@ -1,8 +1,3 @@
-// Initialize Lucide Icons
-if (typeof lucide !== 'undefined') {
-    lucide.createIcons();
-}
-
 // Sticky Navbar Effect
 window.addEventListener('scroll', () => {
     const navbar = document.querySelector('.navbar');
