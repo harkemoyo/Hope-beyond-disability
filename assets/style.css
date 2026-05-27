@@ -78,7 +78,12 @@ body {
     color: var(--text-main);
     overflow-x: hidden;
 }
-
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-inline: 2rem;
+    padding-block: 2rem;
+}
 main {
     grid-row: 3;
     display: flex;
@@ -102,7 +107,6 @@ h1, h2, h3 {
     left: 0;
     width: 100%;
     z-index: 100;
-    padding: 20px 0;
     transition: all var(--transition-speed) ease;
     border-bottom: 1px solid rgba(18, 18, 18, 0.05);
 }
@@ -126,9 +130,6 @@ h1, h2, h3 {
 }
 
 .nav-container {
-    max-width: 1280px;
-    margin: 0 auto;
-    padding: 0 24px;
     display: flex;
     justify-content: space-between;
     align-items: center;
