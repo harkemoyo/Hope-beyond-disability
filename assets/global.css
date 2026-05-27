@@ -94,8 +94,11 @@ main {
 /* Typography */
 h1, h2, h3, h4 {
     font-family: var(--font-heading);
+    margin: 0;
 }
-
+p{
+    margin: 0;
+}
 /* Global Navbar Block */
 .navbar {
     position: fixed;
@@ -517,7 +520,7 @@ h1, h2, h3, h4 {
 
 .page-header--has-image {
     position: relative;
-    padding: 12rem 2rem 4rem 2rem;
+    padding: 15rem 2rem 4rem 2rem;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -550,8 +553,6 @@ h1, h2, h3, h4 {
 }
 
 .page-content-wrapper {
-    max-width: 1000px;
-    margin: 0 auto;
     padding: 2rem;
     display: flex;
     flex-direction: column;
@@ -698,12 +699,12 @@ h1, h2, h3, h4 {
 
 /* 50/50 Columns Layout */
 .section-container-50 {
-    max-width: 1280px;
+    max-width: 1200px;
     margin: 0 auto;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 60px;
+    gap: 3rem;
 }
 
 .section-container-50 > div {
