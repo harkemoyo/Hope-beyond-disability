@@ -11,26 +11,6 @@
     background-color: var(--light-bg-2);
 }
 
-.section-text-col {
-    display: flex;
-    flex-direction: column;
-    gap: 24px;
-    align-items: flex-start;
-}
-
-.section-img-col {
-    flex: 1;
-}
-
-.section-image {
-    width: 100%;
-    max-height: 480px;
-    object-fit: cover;
-    border-radius: 20px;
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
-    display: block;
-}
-
 /* Card Icons */
 .card-icon {
     width: 48px;
@@ -93,32 +73,11 @@
     line-height: 1.6;
 }
 
-/* Program Specific Lists */
-.program-list {
-    color: var(--text-muted-dark);
-    padding-left: 20px;
-    font-size: 1.52rem;
-    line-height: 1.6;
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-}
-
 /* Mobile Media Queries Overrides */
 @media (max-width: 768px) {
     .why-it-matters, .identity-section {
         padding-inline: 2rem;
         padding-block: 60px;
         border-bottom: 1px solid rgba(18, 18, 18, 0.05);
-    }
-    
-    .section-image {
-        max-height: 280px;
-        width: 100%;
-        object-fit: cover;
-    }
-
-    .program-list {
-        padding-left: 24px;
     }
 }

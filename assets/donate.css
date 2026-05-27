@@ -20,6 +20,12 @@
     gap: 10px;
 }
 
+.payment-card__body {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
 .payment-table {
     width: 100%;
     border-collapse: collapse;
