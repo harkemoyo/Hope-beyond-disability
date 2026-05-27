@@ -168,9 +168,6 @@
     color: var(--text-muted-dark);
 }
 
-.about-story__text-col p:not(:last-child) {
-    margin-bottom: 20px;
-}
 
 .about-story__img-col {
     flex: 0.8;
