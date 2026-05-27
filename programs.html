@@ -10,25 +10,26 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700&family=Roboto+Slab:wght@300;400;500;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-<link rel="stylesheet" href="assets/style.css?v=1.2">
+<link rel="stylesheet" href="assets/global.css?v=1.2">
+    <link rel="stylesheet" href="assets/programs.css?v=1.2">
     <link rel="icon" type="image/png" href="assets/images/hbd_logo.webp">
 </head>
 <body>
     <!-- Navbar -->
-    <header class="navbar navbar-transparent">
-        <div class="nav-container">
-            <a href="index.html" class="logo-link">
-                <img src="assets/images/HBD_Logo_WhiteBackground.webp" alt="Hope Beyond Disability Logo" class="logo">
+    <header class="navbar navbar--transparent">
+        <div class="navbar__container">
+            <a href="index.html" class="navbar__logo-link">
+                <img src="assets/images/HBD_Logo_WhiteBackground.webp" alt="Hope Beyond Disability Logo" class="navbar__logo">
             </a>
-            <nav class="nav-links">
-                <a href="index.html">Home</a>
-                <a href="about.html">About Us</a>
-                <a href="programs.html">Programs</a>
-                <a href="partnerships.html">Partnerships</a>
-                <a href="donate.html">Donate</a>
-                <a href="contact.html">Contact</a>
+            <nav class="navbar__links">
+                <a href="index.html" class="navbar__link">Home</a>
+                <a href="about.html" class="navbar__link">About Us</a>
+                <a href="programs.html" class="navbar__link">Programs</a>
+                <a href="partnerships.html" class="navbar__link">Partnerships</a>
+                <a href="donate.html" class="navbar__link">Donate</a>
+                <a href="contact.html" class="navbar__link">Contact</a>
             </nav>
-            <div class="mobile-menu-btn">
+            <div class="navbar__toggle">
                 <span></span>
                 <span></span>
                 <span></span>
@@ -37,7 +38,7 @@
     </header>
 
     <!-- Page Header -->
-    <section class="page-header has-image" style="background-image: url('assets/images/discipleship_circle.webp');">
+    <section class="page-header page-header--has-image" style="background-image: url('assets/images/discipleship_circle.webp');">
         <h1>Our Core Programs</h1>
         <p>Explore the four primary pillars of our ministry and operations, designed to uplift caregivers and provide holistic growth for children living with disabilities.</p>
     </section>
@@ -58,7 +59,7 @@
         <section id="discipleship" class="why-it-matters">
             <div class="section-container-50 align-start">
                 <div class="section-text-col">
-                    <div class="card-icon icon-red">
+                    <div class="card-icon card-icon--red">
                         <i class="fa-solid fa-heart"></i>
                     </div>
                     <h2>Discipleship</h2>
@@ -66,7 +67,7 @@
                         The Discipleship Program exists to encourage spiritual growth and provide holistic support to children with disabilities, caregivers, and families. The program is grounded in recognizing that families caring for children with disabilities often face emotional, spiritual, and social challenges that require intentional encouragement and reminder with the Gospel.
                     </p>
                     
-                    <div class="grid-2col">
+                    <div class="grid grid--2col">
                         <div>
                             <h3>The Need</h3>
                             <ul class="program-list">
@@ -89,8 +90,8 @@
                     <div class="outcome-banner" style="background: rgba(251, 192, 45, 0.06); border-left: 5px solid var(--primary-gold); padding: 20px; border-radius: 8px; margin-top: 24px; display: flex; gap: 16px; align-items: flex-start;">
                         <i style="color: var(--primary-gold); flex-shrink: 0; width: 24px; height: 24px; margin-top: 2px;" class="fa-solid fa-circle-check"></i>
                         <div>
-                            <strong style="display: block; font-size: 1.6rem; color: var(--text-dark); margin-bottom: 4px;">Expected Outcome</strong>
-                            <span style="font-size: 1.52rem; color: var(--text-muted-dark); line-height: 1.6;">Families and caregivers are strengthened spiritually (with the hope of the Gospel), emotionally, and socially, enabling them to care for children with dignity, resilience, and hope.</span>
+                            <strong class="outcome-banner__title" style="display: block; font-size: 1.6rem; color: var(--text-dark); margin-bottom: 4px;">Expected Outcome</strong>
+                            <span class="outcome-banner__text" style="font-size: 1.52rem; color: var(--text-muted-dark); line-height: 1.6;">Families and caregivers are strengthened spiritually (with the hope of the Gospel), emotionally, and socially, enabling them to care for children with dignity, resilience, and hope.</span>
                         </div>
                     </div>
                 </div>
@@ -104,7 +105,7 @@
         <section id="advocacy" class="identity-section">
             <div class="section-container-50 align-start">
                 <div class="section-text-col">
-                    <div class="card-icon icon-red">
+                    <div class="card-icon card-icon--red">
                         <i class="fa-solid fa-bullhorn"></i>
                     </div>
                     <h2>Advocacy</h2>
@@ -112,7 +113,7 @@
                         Through Advocacy we seek to influence policies, systems, institutions, and societal attitudes to ensure children with disabilities and their caregivers are protected, respected, included, and prioritized. HBD works toward building an inclusive society where the rights and dignity of every child are upheld.
                     </p>
                     
-                    <div class="grid-2col">
+                    <div class="grid grid--2col">
                         <div>
                             <h3>The Need</h3>
                             <ul class="program-list">
@@ -137,11 +138,11 @@
                         </div>
                     </div>
                     
-                    <div class="outcome-banner" style="background: rgba(211, 47, 47, 0.05); border-left: 5px solid var(--primary-red); padding: 20px; border-radius: 8px; margin-top: 24px; display: flex; gap: 16px; align-items: flex-start;">
+                    <div class="outcome-banner outcome-banner--red" style="background: rgba(211, 47, 47, 0.05); border-left: 5px solid var(--primary-red); padding: 20px; border-radius: 8px; margin-top: 24px; display: flex; gap: 16px; align-items: flex-start;">
                         <i style="color: var(--primary-red); flex-shrink: 0; width: 24px; height: 24px; margin-top: 2px;" class="fa-solid fa-circle-check"></i>
                         <div>
-                            <strong style="display: block; font-size: 1.6rem; color: var(--text-dark); margin-bottom: 4px;">Expected Outcome</strong>
-                            <span style="font-size: 1.52rem; color: var(--text-muted-dark); line-height: 1.6;">Communities, institutions, and systems become more inclusive, protective, and responsive to the needs and rights of children with disabilities and their caregivers.</span>
+                            <strong class="outcome-banner__title" style="display: block; font-size: 1.6rem; color: var(--text-dark); margin-bottom: 4px;">Expected Outcome</strong>
+                            <span class="outcome-banner__text" style="font-size: 1.52rem; color: var(--text-muted-dark); line-height: 1.6;">Communities, institutions, and systems become more inclusive, protective, and responsive to the needs and rights of children with disabilities and their caregivers.</span>
                         </div>
                     </div>
                 </div>
@@ -155,7 +156,7 @@
         <section id="awareness" class="why-it-matters">
             <div class="section-container-50 align-start">
                 <div class="section-text-col">
-                    <div class="card-icon icon-red">
+                    <div class="card-icon card-icon--red">
                         <i class="fa-solid fa-eye"></i>
                     </div>
                     <h2>Awareness</h2>
@@ -163,7 +164,7 @@
                         Our Awareness Program focuses on educating communities to eliminate stigma, foster understanding, and promote informed engagement with disability issues. The program seeks to transform negative perceptions and build inclusive communities that value and embrace children with disabilities and their families.
                     </p>
                     
-                    <div class="grid-2col">
+                    <div class="grid grid--2col">
                         <div>
                             <h3>The Need</h3>
                             <ul class="program-list">
@@ -191,8 +192,8 @@
                     <div class="outcome-banner" style="background: rgba(251, 192, 45, 0.06); border-left: 5px solid var(--primary-gold); padding: 20px; border-radius: 8px; margin-top: 24px; display: flex; gap: 16px; align-items: flex-start;">
                         <i style="color: var(--primary-gold); flex-shrink: 0; width: 24px; height: 24px; margin-top: 2px;" class="fa-solid fa-circle-check"></i>
                         <div>
-                            <strong style="display: block; font-size: 1.6rem; color: var(--text-dark); margin-bottom: 4px;">Expected Outcome</strong>
-                            <span style="font-size: 1.52rem; color: var(--text-muted-dark); line-height: 1.6;">Communities become more informed, compassionate, and inclusive, reducing stigma and creating environments where children with disabilities can thrive.</span>
+                            <strong class="outcome-banner__title" style="display: block; font-size: 1.6rem; color: var(--text-dark); margin-bottom: 4px;">Expected Outcome</strong>
+                            <span class="outcome-banner__text" style="font-size: 1.52rem; color: var(--text-muted-dark); line-height: 1.6;">Communities become more informed, compassionate, and inclusive, reducing stigma and creating environments where children with disabilities can thrive.</span>
                         </div>
                     </div>
                 </div>
@@ -206,7 +207,7 @@
         <section id="empowerment" class="identity-section">
             <div class="section-container-50 align-start">
                 <div class="section-text-col">
-                    <div class="card-icon icon-red">
+                    <div class="card-icon card-icon--red">
                         <i class="fa-solid fa-wrench"></i>
                     </div>
                     <h2>Empowerment</h2>
@@ -214,7 +215,7 @@
                         Our Empowerment Program strengthens caregivers and families through skills development, training, and access to resources that improve caregiving capacity, family resilience, and quality of life. The program recognizes caregivers as central to the well-being and development of children with disabilities.
                     </p>
                     
-                    <div class="grid-2col">
+                    <div class="grid grid--2col">
                         <div>
                             <h3>The Need</h3>
                             <ul class="program-list">
@@ -239,11 +240,11 @@
                         </div>
                     </div>
                     
-                    <div class="outcome-banner" style="background: rgba(211, 47, 47, 0.05); border-left: 5px solid var(--primary-red); padding: 20px; border-radius: 8px; margin-top: 24px; display: flex; gap: 16px; align-items: flex-start;">
+                    <div class="outcome-banner outcome-banner--red" style="background: rgba(211, 47, 47, 0.05); border-left: 5px solid var(--primary-red); padding: 20px; border-radius: 8px; margin-top: 24px; display: flex; gap: 16px; align-items: flex-start;">
                         <i style="color: var(--primary-red); flex-shrink: 0; width: 24px; height: 24px; margin-top: 2px;" class="fa-solid fa-circle-check"></i>
                         <div>
-                            <strong style="display: block; font-size: 1.6rem; color: var(--text-dark); margin-bottom: 4px;">Expected Outcome</strong>
-                            <span style="font-size: 1.52rem; color: var(--text-muted-dark); line-height: 1.6;">Caregivers are equipped with the skills, confidence, and resources needed to provide quality care, strengthen their families, and improve overall household resilience.</span>
+                            <strong class="outcome-banner__title" style="display: block; font-size: 1.6rem; color: var(--text-dark); margin-bottom: 4px;">Expected Outcome</strong>
+                            <span class="outcome-banner__text" style="font-size: 1.52rem; color: var(--text-muted-dark); line-height: 1.6;">Caregivers are equipped with the skills, confidence, and resources needed to provide quality care, strengthen their families, and improve overall household resilience.</span>
                         </div>
                     </div>
                 </div>
@@ -256,56 +257,56 @@
 
     <!-- Footer -->
     <footer class="footer" id="contact">
-        <div class="footer-container">
-            <div class="footer-brand-col">
-                <a href="index.html" class="logo-link">
-                    <img src="assets/images/hbd_logo.webp" alt="Hope Beyond Disability Logo" class="footer-logo">
+        <div class="footer__container">
+            <div class="footer__brand-col">
+                <a href="index.html" class="navbar__logo-link">
+                    <img src="assets/images/hbd_logo.webp" alt="Hope Beyond Disability Logo" class="footer__logo">
                 </a>
-                <p class="footer-mission">Building compassionate communities where every child is valued and every caregiver is supported.</p>
+                <p class="footer__mission">Building compassionate communities where every child is valued and every caregiver is supported.</p>
             </div>
-            <div class="footer-nav-col">
-                <h4 class="footer-title">Quick Links</h4>
-                <ul class="footer-links">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html">About Us</a></li>
-                    <li><a href="programs.html">Programs</a></li>
-                    <li><a href="partnerships.html">Partnerships</a></li>
-                    <li><a href="impact.html">Our Impact</a></li>
-                    <li><a href="events.html">Events</a></li>
-                    <li><a href="donate.html">Donate</a></li>
-                    <li><a href="contact.html">Contact</a></li>
+            <div class="footer__nav-col">
+                <h4 class="footer__title">Quick Links</h4>
+                <ul class="footer__links">
+                    <li><a href="index.html" class="footer__link">Home</a></li>
+                    <li><a href="about.html" class="footer__link">About Us</a></li>
+                    <li><a href="programs.html" class="footer__link">Programs</a></li>
+                    <li><a href="partnerships.html" class="footer__link">Partnerships</a></li>
+                    <li><a href="impact.html" class="footer__link">Our Impact</a></li>
+                    <li><a href="events.html" class="footer__link">Events</a></li>
+                    <li><a href="donate.html" class="footer__link">Donate</a></li>
+                    <li><a href="contact.html" class="footer__link">Contact</a></li>
                 </ul>
             </div>
-            <div class="footer-contact-col">
-                <h4 class="footer-title">Contact Us</h4>
-                <div class="footer-contact">
-                    <div class="contact-item">
+            <div class="footer__contact-col">
+                <h4 class="footer__title">Contact Us</h4>
+                <div class="footer__contact">
+                    <div class="footer__contact-item">
                         <i style="width:18px; height:18px;" class="fa-solid fa-phone"></i>
                         <a href="tel:+254700000000" style="color: inherit; text-decoration: none;">+254 700 000 000</a>
                     </div>
-                    <div class="contact-item">
+                    <div class="footer__contact-item">
                         <i style="width:18px; height:18px;" class="fa-solid fa-envelope"></i>
                         <span>info@hopebeyonddisability.org</span>
                     </div>
                 </div>
-                <div class="footer-socials">
-                    <a href="https://facebook.com/hopebeyonddisability" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Facebook">
+                <div class="footer__socials">
+                    <a href="https://facebook.com/hopebeyonddisability" target="_blank" rel="noopener noreferrer" class="footer__social-link" aria-label="Facebook">
                         <i style="width:18px; height:18px;" class="fa-brands fa-facebook"></i>
                     </a>
-                    <a href="https://instagram.com/hopebeyonddisability" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Instagram">
+                    <a href="https://instagram.com/hopebeyonddisability" target="_blank" rel="noopener noreferrer" class="footer__social-link" aria-label="Instagram">
                         <i style="width:18px; height:18px;" class="fa-brands fa-instagram"></i>
                     </a>
-                    <a href="https://tiktok.com/@hopebeyonddisability" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="TikTok">
+                    <a href="https://tiktok.com/@hopebeyonddisability" target="_blank" rel="noopener noreferrer" class="footer__social-link" aria-label="TikTok">
                         <i style="width:18px; height:18px;" class="fa-brands fa-tiktok"></i>
                     </a>
                 </div>
             </div>
         </div>
-        <div class="footer-bottom">
-            <p class="footer-copy">&copy; 2026 Hope Beyond Disability. All Rights Reserved.</p>
-            <div class="footer-legal">
-                <a href="privacy.html">Privacy Policy</a>
-                <a href="safeguarding.html">Child Protection & Safeguarding Policy</a>
+        <div class="footer__bottom">
+            <p class="footer__copy">&copy; 2026 Hope Beyond Disability. All Rights Reserved.</p>
+            <div class="footer__legal">
+                <a href="privacy.html" class="footer__legal-link">Privacy Policy</a>
+                <a href="safeguarding.html" class="footer__legal-link">Child Protection & Safeguarding Policy</a>
             </div>
         </div>
     </footer>

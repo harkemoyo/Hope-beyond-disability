@@ -1,0 +1,124 @@
+/* Programs Page Specific Styles */
+
+/* Detailed Program Section Elements */
+.why-it-matters, .identity-section {
+    background-color: var(--light-bg-1);
+    color: var(--text-dark);
+    padding: 80px 24px;
+}
+
+.identity-section {
+    background-color: var(--light-bg-2);
+}
+
+.section-text-col {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    align-items: flex-start;
+}
+
+.section-img-col {
+    flex: 1;
+}
+
+.section-image {
+    width: 100%;
+    max-height: 480px;
+    object-fit: cover;
+    border-radius: 20px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+    display: block;
+}
+
+/* Card Icons */
+.card-icon {
+    width: 48px;
+    height: 48px;
+    background: rgba(251, 192, 45, 0.1);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--primary-gold);
+}
+
+.card-icon--red {
+    background: rgba(211, 47, 47, 0.08);
+    color: var(--primary-red);
+}
+
+/* Outcome Banners (BEM) */
+.outcome-banner {
+    background: rgba(251, 192, 45, 0.06);
+    border-left: 5px solid var(--primary-gold);
+    padding: 20px;
+    border-radius: 8px;
+    margin-top: 24px;
+    display: flex;
+    gap: 16px;
+    align-items: flex-start;
+}
+
+.outcome-banner--red {
+    background: rgba(211, 47, 47, 0.05);
+    border-left-color: var(--primary-red);
+}
+
+.outcome-banner__icon {
+    flex-shrink: 0;
+    width: 24px;
+    height: 24px;
+    margin-top: 2px;
+}
+
+.outcome-banner__icon--red {
+    color: var(--primary-red);
+}
+
+.outcome-banner__icon--gold {
+    color: var(--primary-gold);
+}
+
+.outcome-banner__title {
+    display: block;
+    font-size: 1.6rem;
+    color: var(--text-dark);
+    margin-bottom: 4px;
+}
+
+.outcome-banner__text {
+    font-size: 1.52rem;
+    color: var(--text-muted-dark);
+    line-height: 1.6;
+}
+
+/* Program Specific Lists */
+.program-list {
+    color: var(--text-muted-dark);
+    padding-left: 20px;
+    font-size: 1.52rem;
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+/* Mobile Media Queries Overrides */
+@media (max-width: 768px) {
+    .why-it-matters, .identity-section {
+        padding-inline: 2rem;
+        padding-block: 60px;
+        border-bottom: 1px solid rgba(18, 18, 18, 0.05);
+    }
+    
+    .section-image {
+        max-height: 280px;
+        width: 100%;
+        object-fit: cover;
+    }
+
+    .program-list {
+        padding-left: 24px;
+    }
+}

@@ -1,0 +1,122 @@
+/* Contact Page Specific Styles */
+
+/* Contact Details Card Block BEM */
+.contact-info {
+    background: var(--light-bg-1);
+    border: 1px solid rgba(18, 18, 18, 0.05);
+    border-radius: 12px;
+    padding: 30px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.02);
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    width: 100%;
+}
+
+.contact-info__item {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.contact-info__label {
+    display: block;
+    font-size: 1.36rem;
+    color: var(--text-muted-dark);
+}
+
+.contact-info__value {
+    font-size: 1.6rem;
+    color: var(--text-dark);
+    font-weight: 600;
+    text-decoration: none;
+}
+
+/* Contact Form wrapper BEM */
+.contact-form-card {
+    background: var(--light-bg-1);
+    padding: 40px;
+    border-radius: 20px;
+    border: 1px solid rgba(18, 18, 18, 0.05);
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.contact-form-card__title {
+    font-size: 2.4rem;
+    font-weight: 700;
+    color: var(--text-dark);
+}
+
+/* FAQ Accordion Styling BEM */
+.faq {
+    padding: 80px 24px;
+    background: var(--light-bg-2);
+    border-top: 1px solid rgba(18, 18, 18, 0.05);
+}
+
+.faq__container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.faq__title {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: clamp(2.8rem, 3.5vw, 4rem);
+    font-weight: 700;
+}
+
+.faq-item {
+    border-bottom: 1px solid rgba(18, 18, 18, 0.08);
+    padding: 20px 0;
+}
+
+.faq-item__question {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.76rem;
+    font-weight: 600;
+    color: var(--text-dark);
+    cursor: pointer;
+    user-select: none;
+    gap: 12px;
+}
+
+.faq-item__answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s cubic-bezier(0, 1, 0, 1);
+    font-size: 1.52rem;
+    color: var(--text-muted-dark);
+    line-height: 1.6;
+    margin-top: 0;
+}
+
+.faq-item--active .faq-item__answer {
+    max-height: 1000px;
+    transition: max-height 0.3s cubic-bezier(0.9, 0, 0.8, 0.2);
+    margin-top: 12px;
+}
+
+.faq-item__icon {
+    transition: transform 0.3s ease;
+    flex-shrink: 0;
+}
+
+.faq-item--active .faq-item__icon {
+    transform: rotate(180deg);
+}
+
+/* Mobile Media Queries Overrides */
+@media (max-width: 768px) {
+    .faq {
+        padding-block: 60px;
+    }
+    
+    .contact-form-card {
+        padding: 24px 16px;
+    }
+}

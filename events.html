@@ -10,25 +10,26 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700&family=Roboto+Slab:wght@300;400;500;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-<link rel="stylesheet" href="assets/style.css?v=1.2">
+<link rel="stylesheet" href="assets/global.css?v=1.2">
+    <link rel="stylesheet" href="assets/events.css?v=1.2">
     <link rel="icon" type="image/png" href="assets/images/hbd_logo.webp">
 </head>
 <body>
     <!-- Navbar -->
     <header class="navbar">
-        <div class="nav-container">
-            <a href="index.html" class="logo-link">
-                <img src="assets/images/HBD_Logo_WhiteBackground.webp" alt="Hope Beyond Disability Logo" class="logo">
+        <div class="navbar__container">
+            <a href="index.html" class="navbar__logo-link">
+                <img src="assets/images/HBD_Logo_WhiteBackground.webp" alt="Hope Beyond Disability Logo" class="navbar__logo">
             </a>
-            <nav class="nav-links">
-                <a href="index.html">Home</a>
-                <a href="about.html">About Us</a>
-                <a href="programs.html">Programs</a>
-                <a href="partnerships.html">Partnerships</a>
-                <a href="donate.html">Donate</a>
-                <a href="contact.html">Contact</a>
+            <nav class="navbar__links">
+                <a href="index.html" class="navbar__link">Home</a>
+                <a href="about.html" class="navbar__link">About Us</a>
+                <a href="programs.html" class="navbar__link">Programs</a>
+                <a href="partnerships.html" class="navbar__link">Partnerships</a>
+                <a href="donate.html" class="navbar__link">Donate</a>
+                <a href="contact.html" class="navbar__link">Contact</a>
             </nav>
-            <div class="mobile-menu-btn">
+            <div class="navbar__toggle">
                 <span></span>
                 <span></span>
                 <span></span>
@@ -38,8 +39,8 @@
 
     <!-- Page Header -->
     <section class="page-header">
-        <h1>Upcoming Events</h1>
-        <p>Stay informed about our upcoming caregiver fellowships, awareness campaigns, and community forums.</p>
+        <h1 class="page-header__title">Upcoming Events</h1>
+        <p class="page-header__subtitle">Stay informed about our upcoming caregiver fellowships, awareness campaigns, and community forums.</p>
     </section>
 
     <!-- Page Content -->
@@ -52,62 +53,62 @@
             <p style="font-size: 1.76rem; line-height: 1.7; color: var(--text-muted-dark); margin-bottom: 24px;">
                 We host regular caregiver fellowships, community sensitization workshops, and public advocacy campaigns. Our calendar of upcoming events for the year is currently being finalized. Check back soon for event details, dates, and information on how you can attend or volunteer.
             </p>
-            <a href="index.html" class="btn btn-solid" style="display: inline-block; text-decoration: none;">Return to Home</a>
+            <a href="index.html" class="btn btn--solid" style="display: inline-block; text-decoration: none;">Return to Home</a>
         </div>
     </main>
 
     <!-- Footer -->
     <footer class="footer" id="contact">
-        <div class="footer-container">
-            <div class="footer-brand-col">
-                <a href="index.html" class="logo-link">
-                    <img src="assets/images/hbd_logo.webp" alt="Hope Beyond Disability Logo" class="footer-logo">
+        <div class="footer__container">
+            <div class="footer__brand-col">
+                <a href="index.html" class="navbar__logo-link">
+                    <img src="assets/images/hbd_logo.webp" alt="Hope Beyond Disability Logo" class="footer__logo">
                 </a>
-                <p class="footer-mission">Building compassionate communities where every child is valued and every caregiver is supported.</p>
+                <p class="footer__mission">Building compassionate communities where every child is valued and every caregiver is supported.</p>
             </div>
-            <div class="footer-nav-col">
-                <h4 class="footer-title">Quick Links</h4>
-                <ul class="footer-links">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html">About Us</a></li>
-                    <li><a href="programs.html">Programs</a></li>
-                    <li><a href="partnerships.html">Partnerships</a></li>
-                    <li><a href="impact.html">Our Impact</a></li>
-                    <li><a href="events.html">Events</a></li>
-                    <li><a href="donate.html">Donate</a></li>
-                    <li><a href="contact.html">Contact</a></li>
+            <div class="footer__nav-col">
+                <h4 class="footer__title">Quick Links</h4>
+                <ul class="footer__links">
+                    <li><a href="index.html" class="footer__link">Home</a></li>
+                    <li><a href="about.html" class="footer__link">About Us</a></li>
+                    <li><a href="programs.html" class="footer__link">Programs</a></li>
+                    <li><a href="partnerships.html" class="footer__link">Partnerships</a></li>
+                    <li><a href="impact.html" class="footer__link">Our Impact</a></li>
+                    <li><a href="events.html" class="footer__link">Events</a></li>
+                    <li><a href="donate.html" class="footer__link">Donate</a></li>
+                    <li><a href="contact.html" class="footer__link">Contact</a></li>
                 </ul>
             </div>
-            <div class="footer-contact-col">
-                <h4 class="footer-title">Contact Us</h4>
-                <div class="footer-contact">
-                    <div class="contact-item">
+            <div class="footer__contact-col">
+                <h4 class="footer__title">Contact Us</h4>
+                <div class="footer__contact">
+                    <div class="footer__contact-item">
                         <i style="width:18px; height:18px;" class="fa-solid fa-phone"></i>
                         <a href="tel:+254700000000" style="color: inherit; text-decoration: none;">+254 700 000 000</a>
                     </div>
-                    <div class="contact-item">
+                    <div class="footer__contact-item">
                         <i style="width:18px; height:18px;" class="fa-solid fa-envelope"></i>
                         <span>info@hopebeyonddisability.org</span>
                     </div>
                 </div>
-                <div class="footer-socials">
-                    <a href="https://facebook.com/hopebeyonddisability" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Facebook">
+                <div class="footer__socials">
+                    <a href="https://facebook.com/hopebeyonddisability" target="_blank" rel="noopener noreferrer" class="footer__social-link" aria-label="Facebook">
                         <i style="width:18px; height:18px;" class="fa-brands fa-facebook"></i>
                     </a>
-                    <a href="https://instagram.com/hopebeyonddisability" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Instagram">
+                    <a href="https://instagram.com/hopebeyonddisability" target="_blank" rel="noopener noreferrer" class="footer__social-link" aria-label="Instagram">
                         <i style="width:18px; height:18px;" class="fa-brands fa-instagram"></i>
                     </a>
-                    <a href="https://tiktok.com/@hopebeyonddisability" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="TikTok">
+                    <a href="https://tiktok.com/@hopebeyonddisability" target="_blank" rel="noopener noreferrer" class="footer__social-link" aria-label="TikTok">
                         <i style="width:18px; height:18px;" class="fa-brands fa-tiktok"></i>
                     </a>
                 </div>
             </div>
         </div>
-        <div class="footer-bottom">
-            <p class="footer-copy">&copy; 2026 Hope Beyond Disability. All Rights Reserved.</p>
-            <div class="footer-legal">
-                <a href="privacy.html">Privacy Policy</a>
-                <a href="safeguarding.html">Child Protection & Safeguarding Policy</a>
+        <div class="footer__bottom">
+            <p class="footer__copy">&copy; 2026 Hope Beyond Disability. All Rights Reserved.</p>
+            <div class="footer__legal">
+                <a href="privacy.html" class="footer__legal-link">Privacy Policy</a>
+                <a href="safeguarding.html" class="footer__legal-link">Child Protection & Safeguarding Policy</a>
             </div>
         </div>
     </footer>

@@ -10,26 +10,27 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700&family=Roboto+Slab:wght@300;400;500;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-    <link rel="stylesheet" href="assets/style.css?v=1.3">
+    <link rel="stylesheet" href="assets/global.css?v=1.3">
+    <link rel="stylesheet" href="assets/index.css?v=1.3">
     <link rel="icon" type="image/png" href="assets/images/hbd_logo.webp">
 </head>
 <body>
     <div class="container">
     <!-- Navbar -->
-    <header class="navbar navbar-transparent">
-        <div class="nav-container">
-            <a href="index.html" class="logo-link">
-                <img src="assets/images/HBD_Logo_WhiteBackground.webp" alt="Hope Beyond Disability Logo" class="logo">
+    <header class="navbar navbar--transparent">
+        <div class="navbar__container">
+            <a href="index.html" class="navbar__logo-link">
+                <img src="assets/images/HBD_Logo_WhiteBackground.webp" alt="Hope Beyond Disability Logo" class="navbar__logo">
             </a>
-            <nav class="nav-links">
-                <a href="index.html">Home</a>
-                <a href="about.html">About Us</a>
-                <a href="programs.html">Programs</a>
-                <a href="partnerships.html">Partnerships</a>
-                <a href="donate.html">Donate</a>
-                <a href="contact.html">Contact</a>
+            <nav class="navbar__links">
+                <a href="index.html" class="navbar__link">Home</a>
+                <a href="about.html" class="navbar__link">About Us</a>
+                <a href="programs.html" class="navbar__link">Programs</a>
+                <a href="partnerships.html" class="navbar__link">Partnerships</a>
+                <a href="donate.html" class="navbar__link">Donate</a>
+                <a href="contact.html" class="navbar__link">Contact</a>
             </nav>
-            <div class="mobile-menu-btn">
+            <div class="navbar__toggle">
                 <span></span>
                 <span></span>
                 <span></span>
@@ -48,39 +49,39 @@
             <p class="hero-subtitle">At Hope Beyond Disability (HBD), we believe that every child deserves dignity, inclusion, love, and the opportunity to flourish. We exist to respond to the stigma, exclusion, and limited support experienced by children living with disabilities and their caregivers.</p>
             <p class="hero-subtitle">Through awareness, advocacy, discipleship, and caregiver empowerment, we are building informed communities and strengthening families with the support, skills, and hope they need to thrive.</p>
             <div class="hero-cta-group">
-                <a href="#partnerships" class="btn btn-ghost">Partner With Us</a>
-                <a href="#donate" class="btn btn-solid">Support Our Work</a>
+                <a href="#partnerships" class="btn btn--ghost">Partner With Us</a>
+                <a href="#donate" class="btn btn--solid">Support Our Work</a>
             </div>
         </div>
     </section>
 
     <!-- Section S2: Why It Matters -->
     <section class="why-it-matters" id="about">
-        <div class="section-container-50">
-            <div class="section-img-col">
-                <img src="assets/images/why_it_matters_community.webp" alt="East African community gathering and families smiling together">
+        <div class="why-it-matters__container">
+            <div class="why-it-matters__img-col">
+                <img src="assets/images/why_it_matters_community.webp" alt="East African community gathering and families smiling together" class="why-it-matters__image">
             </div>
-            <div class="section-text-col">
-                <h2>Why It Matters</h2>
-                <p>Many children with disabilities and their families continue to face rejection, isolation, discrimination, and limited access to opportunities and support systems. At HBD, we are committed to changing this reality by building compassionate communities where every child is valued and every caregiver is supported.</p>
+            <div class="why-it-matters__text-col">
+                <h2 class="why-it-matters__title">Why It Matters</h2>
+                <p class="why-it-matters__description">Many children with disabilities and their families continue to face rejection, isolation, discrimination, and limited access to opportunities and support systems. At HBD, we are committed to changing this reality by building compassionate communities where every child is valued and every caregiver is supported.</p>
             </div>
         </div>
     </section>
 
     <!-- Section S3: Core Pillars (Programs) -->
-    <section class="programs-section" id="programs">
-        <div class="programs-header">
-            <h2>Our Core Pillars</h2>
-            <p>We work holistically to build inclusive environments, empower families, and ensure children living with disabilities receive the dignity and love they deserve.</p>
+    <section class="programs" id="programs">
+        <div class="programs__header">
+            <h2 class="programs__title">Our Core Pillars</h2>
+            <p class="programs__description">We work holistically to build inclusive environments, empower families, and ensure children living with disabilities receive the dignity and love they deserve.</p>
         </div>
-        <div class="programs-grid">
+        <div class="programs__grid">
             <!-- Card 1: Discipleship -->
             <div class="program-card">
-                <div class="card-img-wrapper">
-                    <img src="assets/images/discipleship_circle.webp" alt="Caregivers and families sitting in a supportive community circle sharing experiences">
+                <div class="program-card__img-wrapper">
+                    <img src="assets/images/discipleship_circle.webp" alt="Caregivers and families sitting in a supportive community circle sharing experiences" class="program-card__image">
                 </div>
-                <div class="card-body">
-                    <div class="card-icon">
+                <div class="program-card__body">
+                    <div class="program-card__icon">
                         <i class="fa-solid fa-heart"></i>
                     </div>
                     <h3>Discipleship</h3>
@@ -91,11 +92,11 @@
             </div>
             <!-- Card 2: Advocacy -->
             <div class="program-card">
-                <div class="card-img-wrapper">
-                    <img src="assets/images/advocacy_meeting.webp" alt="Advocacy workshop in action in an East African community hall">
+                <div class="program-card__img-wrapper">
+                    <img src="assets/images/advocacy_meeting.webp" alt="Advocacy workshop in action in an East African community hall" class="program-card__image">
                 </div>
-                <div class="card-body">
-                    <div class="card-icon">
+                <div class="program-card__body">
+                    <div class="program-card__icon">
                         <i class="fa-solid fa-bullhorn"></i>
                     </div>
                     <h3>Advocacy</h3>
@@ -106,11 +107,11 @@
             </div>
             <!-- Card 3: Awareness -->
             <div class="program-card">
-                <div class="card-img-wrapper">
-                    <img src="assets/images/awareness_workshop.webp" alt="Educational outdoor community training on child disability awareness">
+                <div class="program-card__img-wrapper">
+                    <img src="assets/images/awareness_workshop.webp" alt="Educational outdoor community training on child disability awareness" class="program-card__image">
                 </div>
-                <div class="card-body">
-                    <div class="card-icon">
+                <div class="program-card__body">
+                    <div class="program-card__icon">
                         <i class="fa-solid fa-eye"></i>
                     </div>
                     <h3>Awareness</h3>
@@ -121,11 +122,11 @@
             </div>
             <!-- Card 4: Empowerment -->
             <div class="program-card">
-                <div class="card-img-wrapper">
-                    <img src="assets/images/empowerment_training.webp" alt="Caregiver skills development training session working on sewing and crafts">
+                <div class="program-card__img-wrapper">
+                    <img src="assets/images/empowerment_training.webp" alt="Caregiver skills development training session working on sewing and crafts" class="program-card__image">
                 </div>
-                <div class="card-body">
-                    <div class="card-icon">
+                <div class="program-card__body">
+                    <div class="program-card__icon">
                         <i class="fa-solid fa-wrench"></i>
                     </div>
                     <h3>Empowerment</h3>
@@ -138,64 +139,64 @@
     </section>
 
     <!-- Section S4: Our Identity + Video -->
-    <section class="identity-section">
-        <div class="section-container-50 reverse-mobile">
-            <div class="section-text-col">
-                <h2>Driven by compassion, guided by faith</h2>
-                <p>Founded in 2025, Hope Beyond Disability is a registered Community Based Organisation. Through awareness, advocacy, discipleship, and caregiver empowerment, we build informed communities and strengthen families with the support, skills, and hope they need to thrive.</p>
-                <a href="about.html" class="btn btn-solid">Learn more about our vision & values</a>
+    <section class="identity">
+        <div class="identity__container">
+            <div class="identity__text-col">
+                <h2 class="identity__title">Driven by compassion, guided by faith</h2>
+                <p class="identity__description">Founded in 2025, Hope Beyond Disability is a registered Community Based Organisation. Through awareness, advocacy, discipleship, and caregiver empowerment, we build informed communities and strengthen families with the support, skills, and hope they need to thrive.</p>
+                <a href="about.html" class="btn btn--solid identity__button">Learn more about our vision & values</a>
             </div>
-            <div class="section-video-col">
+            <div class="identity__video-col">
                 <div class="video-block" id="videoBlock">
-                    <div class="video-overlay">
-                        <div class="play-btn-wrapper">
-                            <div class="play-btn">
+                    <div class="video-block__overlay">
+                        <div class="video-block__play-wrapper">
+                            <div class="video-block__play-btn">
                                 <svg viewBox="0 0 24 24">
                                     <path d="M8 5v14l11-7z"/>
                                 </svg>
                             </div>
                         </div>
                     </div>
-                    <img src="assets/images/caregiver_child.webp" class="video-thumbnail" alt="Warm photograph of East African caregiver holding child's hand gently">
-                    <iframe class="video-iframe" id="videoIframe" src="https://www.youtube.com/embed/3Mzs-QpWwz8?enablejsapi=1" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                    <img src="assets/images/caregiver_child.webp" class="video-block__thumbnail" alt="Warm photograph of East African caregiver holding child's hand gently">
+                    <iframe class="video-block__iframe" id="videoIframe" src="https://www.youtube.com/embed/3Mzs-QpWwz8?enablejsapi=1" allow="autoplay; encrypted-media" allowfullscreen></iframe>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Section S5: Get Involved -->
-    <section class="cta-section" id="partnerships">
-        <div class="cta-header">
-            <h2>Get Involved Today</h2>
-            <p>Partner with us</p>
+    <section class="get-involved" id="partnerships">
+        <div class="get-involved__header">
+            <h2 class="get-involved__title">Get Involved Today</h2>
+            <p class="get-involved__subtitle">Partner with us</p>
         </div>
-        <div class="cta-grid">
+        <div class="get-involved__grid">
             <!-- Support a Caregiver -->
-            <div class="cta-col">
-                <div class="cta-icon">
+            <div class="get-involved-card">
+                <div class="get-involved-card__icon">
                     <i class="fa-solid fa-heart"></i>
                 </div>
                 <h3>Support a caregiver</h3>
                 <p>Your donation provides critical livelihood training, peer support networks, and emotional care for families facing rejection and stigma.</p>
-                <a href="donate.html" class="btn-cta">Donate Now</a>
+                <a href="donate.html" class="btn btn--cta">Donate Now</a>
             </div>
             <!-- Advocate for Inclusion -->
-            <div class="cta-col">
-                <div class="cta-icon">
+            <div class="get-involved-card">
+                <div class="get-involved-card__icon">
                     <i class="fa-solid fa-bullhorn"></i>
                 </div>
                 <h3>Advocate for inclusion</h3>
                 <p>Partner with us to raise community awareness, advance civic support, and champion policies that defend the rights and dignity of every child.</p>
-                <a href="partnerships.html" class="btn-cta">Become a Partner</a>
+                <a href="partnerships.html" class="btn btn--cta">Become a Partner</a>
             </div>
             <!-- Volunteer or Collaborate -->
-            <div class="cta-col">
-                <div class="cta-icon">
+            <div class="get-involved-card">
+                <div class="get-involved-card__icon">
                     <i class="fa-solid fa-users"></i>
                 </div>
                 <h3>Volunteer or collaborate</h3>
                 <p>Share your skills, time, and compassion. Help run workshops, support events, or collaborate with us as we expand our outreach programs.</p>
-                <a href="contact.html?subject=Volunteer" class="btn-cta">Contact Us to Volunteer</a>
+                <a href="contact.html?subject=Volunteer" class="btn btn--cta">Contact Us to Volunteer</a>
             </div>
         </div>
     </section>
@@ -203,59 +204,59 @@
 
     <!-- Section S6: Footer -->
     <footer class="footer" id="contact">
-        <div class="footer-container">
+        <div class="footer__container">
             <!-- Left Column -->
-            <div class="footer-brand-col">
-                <a href="index.html" class="logo-link">
-                    <img src="assets/images/hbd_logo.webp" alt="Hope Beyond Disability Logo" class="footer-logo">
+            <div class="footer__brand-col">
+                <a href="index.html" class="navbar__logo-link">
+                    <img src="assets/images/hbd_logo.webp" alt="Hope Beyond Disability Logo" class="footer__logo">
                 </a>
-                <p class="footer-mission">Building compassionate communities where every child is valued and every caregiver is supported.</p>
+                <p class="footer__mission">Building compassionate communities where every child is valued and every caregiver is supported.</p>
             </div>
             <!-- Middle Column -->
-            <div class="footer-nav-col">
-                <h4 class="footer-title">Quick Links</h4>
-                <ul class="footer-links">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html">About Us</a></li>
-                    <li><a href="programs.html">Programs</a></li>
-                    <li><a href="partnerships.html">Partnerships</a></li>
-                    <li><a href="impact.html">Our Impact</a></li>
-                    <li><a href="events.html">Events</a></li>
-                    <li><a href="donate.html">Donate</a></li>
-                    <li><a href="contact.html">Contact</a></li>
+            <div class="footer__nav-col">
+                <h4 class="footer__title">Quick Links</h4>
+                <ul class="footer__links">
+                    <li><a href="index.html" class="footer__link">Home</a></li>
+                    <li><a href="about.html" class="footer__link">About Us</a></li>
+                    <li><a href="programs.html" class="footer__link">Programs</a></li>
+                    <li><a href="partnerships.html" class="footer__link">Partnerships</a></li>
+                    <li><a href="impact.html" class="footer__link">Our Impact</a></li>
+                    <li><a href="events.html" class="footer__link">Events</a></li>
+                    <li><a href="donate.html" class="footer__link">Donate</a></li>
+                    <li><a href="contact.html" class="footer__link">Contact</a></li>
                 </ul>
             </div>
             <!-- Right Column -->
-            <div class="footer-contact-col">
-                <h4 class="footer-title">Contact Us</h4>
-                <div class="footer-contact">
-                    <div class="contact-item">
+            <div class="footer__contact-col">
+                <h4 class="footer__title">Contact Us</h4>
+                <div class="footer__contact">
+                    <div class="footer__contact-item">
                         <i style="width:18px; height:18px;" class="fa-solid fa-phone"></i>
                         <a href="tel:+254700000000" style="color: inherit; text-decoration: none;">+254 700 000 000</a>
                     </div>
-                    <div class="contact-item">
+                    <div class="footer__contact-item">
                         <i style="width:18px; height:18px;" class="fa-solid fa-envelope"></i>
                         <span>info@hopebeyonddisability.org</span>
                     </div>
                 </div>
-                <div class="footer-socials">
-                    <a href="https://facebook.com/hopebeyonddisability" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Facebook">
+                <div class="footer__socials">
+                    <a href="https://facebook.com/hopebeyonddisability" target="_blank" rel="noopener noreferrer" class="footer__social-link" aria-label="Facebook">
                         <i style="width:18px; height:18px;" class="fa-brands fa-facebook"></i>
                     </a>
-                    <a href="https://instagram.com/hopebeyonddisability" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Instagram">
+                    <a href="https://instagram.com/hopebeyonddisability" target="_blank" rel="noopener noreferrer" class="footer__social-link" aria-label="Instagram">
                         <i style="width:18px; height:18px;" class="fa-brands fa-instagram"></i>
                     </a>
-                    <a href="https://tiktok.com/@hopebeyonddisability" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="TikTok">
+                    <a href="https://tiktok.com/@hopebeyonddisability" target="_blank" rel="noopener noreferrer" class="footer__social-link" aria-label="TikTok">
                         <i style="width:18px; height:18px;" class="fa-brands fa-tiktok"></i>
                     </a>
                 </div>
             </div>
         </div>
-        <div class="footer-bottom">
-            <p class="footer-copy">&copy; 2026 Hope Beyond Disability. All Rights Reserved.</p>
-            <div class="footer-legal">
-                <a href="privacy.html">Privacy Policy</a>
-                <a href="safeguarding.html">Child Protection & Safeguarding Policy</a>
+        <div class="footer__bottom">
+            <p class="footer__copy">&copy; 2026 Hope Beyond Disability. All Rights Reserved.</p>
+            <div class="footer__legal">
+                <a href="privacy.html" class="footer__legal-link">Privacy Policy</a>
+                <a href="safeguarding.html" class="footer__legal-link">Child Protection & Safeguarding Policy</a>
             </div>
         </div>
     </footer>

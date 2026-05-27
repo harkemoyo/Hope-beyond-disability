@@ -10,25 +10,26 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700&family=Roboto+Slab:wght@300;400;500;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-<link rel="stylesheet" href="assets/style.css?v=1.2">
+<link rel="stylesheet" href="assets/global.css?v=1.2">
+    <link rel="stylesheet" href="assets/contact.css?v=1.2">
     <link rel="icon" type="image/png" href="assets/images/hbd_logo.webp">
 </head>
 <body>
     <!-- Navbar -->
     <header class="navbar">
-        <div class="nav-container">
-            <a href="index.html" class="logo-link">
-                <img src="assets/images/HBD_Logo_WhiteBackground.webp" alt="Hope Beyond Disability Logo" class="logo">
+        <div class="navbar__container">
+            <a href="index.html" class="navbar__logo-link">
+                <img src="assets/images/HBD_Logo_WhiteBackground.webp" alt="Hope Beyond Disability Logo" class="navbar__logo">
             </a>
-            <nav class="nav-links">
-                <a href="index.html">Home</a>
-                <a href="about.html">About Us</a>
-                <a href="programs.html">Programs</a>
-                <a href="partnerships.html">Partnerships</a>
-                <a href="donate.html">Donate</a>
-                <a href="contact.html">Contact</a>
+            <nav class="navbar__links">
+                <a href="index.html" class="navbar__link">Home</a>
+                <a href="about.html" class="navbar__link">About Us</a>
+                <a href="programs.html" class="navbar__link">Programs</a>
+                <a href="partnerships.html" class="navbar__link">Partnerships</a>
+                <a href="donate.html" class="navbar__link">Donate</a>
+                <a href="contact.html" class="navbar__link">Contact</a>
             </nav>
-            <div class="mobile-menu-btn">
+            <div class="navbar__toggle">
                 <span></span>
                 <span></span>
                 <span></span>
@@ -38,20 +39,20 @@
 
     <!-- Page Header -->
     <section class="page-header">
-        <h1>Contact Us</h1>
-        <p>Do you have questions, feedback, or inquiries about our programs? Fill out the form below or reach out directly via call/email.</p>
+        <h1 class="page-header__title">Contact Us</h1>
+        <p class="page-header__subtitle">Do you have questions, feedback, or inquiries about our programs? Fill out the form below or reach out directly via call/email.</p>
     </section>
 
     <!-- Page Content -->
     <main class="page-content-wrapper">
-        <div class="grid-2col-wide" style="margin-bottom: 60px;">
+        <div class="grid grid--2col-wide" style="margin-bottom: 60px;">
             <!-- Left Info Panel (Grouped in Card) -->
             <div class="content-section">
                 <h2>Get in Touch Directly</h2>
                 <p style="margin-bottom: 24px;">
                     We would love to hear from you. Feel free to contact our support desk or schedule a visit to our community center.
                 </p>
-                <div class="contact-details-card">
+                <div class="contact-info">
                     <div style="display: flex; align-items: center; gap: 16px;">
                         <div class="icon-bubble">
                             <i class="fa-solid fa-phone"></i>
@@ -74,24 +75,24 @@
             </div>
 
             <!-- Right Form Panel -->
-            <div class="form-card">
+            <div class="contact-form-card">
                 <h2>Send a Message</h2>
-                <form id="contactForm" class="form-container" action="https://formspree.io/f/placeholder_id" method="POST" data-netlify="true" name="contact">
-                    <div class="form-group">
-                        <label for="fullName" class="form-label">Full Name</label>
-                        <input type="text" id="fullName" name="name" class="form-input" placeholder="Your full name" required>
+                <form id="contactForm" class="contact-form" action="https://formspree.io/f/placeholder_id" method="POST" data-netlify="true" name="contact">
+                    <div class="form-field">
+                        <label for="fullName" class="form-field__label">Full Name</label>
+                        <input type="text" id="fullName" name="name" class="form-field__input" placeholder="Your full name" required>
                     </div>
-                    <div class="form-group">
-                        <label for="email" class="form-label">Email Address</label>
-                        <input type="email" id="email" name="email" class="form-input" placeholder="Your email address" required>
+                    <div class="form-field">
+                        <label for="email" class="form-field__label">Email Address</label>
+                        <input type="email" id="email" name="email" class="form-field__input" placeholder="Your email address" required>
                     </div>
-                    <div class="form-group">
-                        <label for="phone" class="form-label">Phone Number (Optional)</label>
-                        <input type="tel" id="phone" name="phone" class="form-input" placeholder="Your phone number">
+                    <div class="form-field">
+                        <label for="phone" class="form-field__label">Phone Number (Optional)</label>
+                        <input type="tel" id="phone" name="phone" class="form-field__input" placeholder="Your phone number">
                     </div>
-                    <div class="form-group">
-                        <label for="subject" class="form-label">Subject</label>
-                        <select id="subject" name="subject" class="form-select" required>
+                    <div class="form-field">
+                        <label for="subject" class="form-field__label">Subject</label>
+                        <select id="subject" name="subject" class="form-field__select" required>
                             <option value="">Select a topic...</option>
                             <option value="General">General Inquiry</option>
                             <option value="Volunteer">Volunteer Opportunities</option>
@@ -99,56 +100,56 @@
                             <option value="Donation">Donation Inquiry</option>
                         </select>
                     </div>
-                    <div class="form-group">
-                        <label for="message" class="form-label">Message</label>
-                        <textarea id="message" name="message" class="form-textarea" rows="5" placeholder="How can we help you?" required></textarea>
+                    <div class="form-field">
+                        <label for="message" class="form-field__label">Message</label>
+                        <textarea id="message" name="message" class="form-field__textarea" rows="5" placeholder="How can we help you?" required></textarea>
                     </div>
-                    <button type="submit" class="btn btn-solid" style="width: 100%; border: none; font-size: 1.6rem; margin-bottom: 12px;">Submit Message</button>
+                    <button type="submit" class="btn btn--solid" style="width: 100%; border: none; font-size: 1.6rem; margin-bottom: 12px;">Submit Message</button>
                 </form>
             </div>
         </div>
 
         <!-- FAQ Accordion Section -->
-        <section class="faq-section">
-            <div class="faq-container">
-                <h2 class="faq-title">Frequently Asked Questions</h2>
+        <section class="faq">
+            <div class="faq__container">
+                <h2 class="faq__title">Frequently Asked Questions</h2>
                 
                 <div class="faq-item">
-                    <div class="faq-question">
+                    <div class="faq-item__question">
                         <span>Are you a registered organization?</span>
                         <i class="faq-icon fa-solid fa-chevron-down" style="width: 20px; height: 20px;"></i>
                     </div>
-                    <div class="faq-answer">
+                    <div class="faq-item__answer">
                         <p>Yes, Hope Beyond Disability is fully registered in Kenya as a Community Based Organization (CBO). We operate under local social development regulations and maintain strict audit and compliance standards.</p>
                     </div>
                 </div>
 
                 <div class="faq-item">
-                    <div class="faq-question">
+                    <div class="faq-item__question">
                         <span>Where are you located?</span>
                         <i class="faq-icon fa-solid fa-chevron-down" style="width: 20px; height: 20px;"></i>
                     </div>
-                    <div class="faq-answer">
+                    <div class="faq-item__answer">
                         <p>Our administrative office and primary community outreach center are located in Nairobi, Kenya (specifically Karen and surrounding municipal areas). We conduct workshops and host caregiver groups throughout these regions.</p>
                     </div>
                 </div>
 
                 <div class="faq-item">
-                    <div class="faq-question">
+                    <div class="faq-item__question">
                         <span>Can I donate non-monetary items?</span>
                         <i class="faq-icon fa-solid fa-chevron-down" style="width: 20px; height: 20px;"></i>
                     </div>
-                    <div class="faq-answer">
+                    <div class="faq-item__answer">
                         <p>Absolutely! We welcome in-kind donations such as physical mobility aids (wheelchairs, crutches, walking frames), educational toys, sensory learning items, children's clothes, and vocational training supplies (sewing machines, scissors, sewing fabrics). Please email us at info@hopebeyonddisability.org to coordinate drop-off or pickup.</p>
                     </div>
                 </div>
 
                 <div class="faq-item">
-                    <div class="faq-question">
+                    <div class="faq-item__question">
                         <span>How are financial donations utilized?</span>
                         <i class="faq-icon fa-solid fa-chevron-down" style="width: 20px; height: 20px;"></i>
                     </div>
-                    <div class="faq-answer">
+                    <div class="faq-item__answer">
                         <p>100% of public donations are used directly on the ground to fund caregiver vocational skills training, family discipleship retreats, purchasing mobility aids for children, and staging community anti-stigma awareness campaigns.</p>
                     </div>
                 </div>
@@ -158,56 +159,56 @@
 
     <!-- Footer -->
     <footer class="footer" id="contact">
-        <div class="footer-container">
-            <div class="footer-brand-col">
-                <a href="index.html" class="logo-link">
-                    <img src="assets/images/hbd_logo.webp" alt="Hope Beyond Disability Logo" class="footer-logo">
+        <div class="footer__container">
+            <div class="footer__brand-col">
+                <a href="index.html" class="navbar__logo-link">
+                    <img src="assets/images/hbd_logo.webp" alt="Hope Beyond Disability Logo" class="footer__logo">
                 </a>
-                <p class="footer-mission">Building compassionate communities where every child is valued and every caregiver is supported.</p>
+                <p class="footer__mission">Building compassionate communities where every child is valued and every caregiver is supported.</p>
             </div>
-            <div class="footer-nav-col">
-                <h4 class="footer-title">Quick Links</h4>
-                <ul class="footer-links">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html">About Us</a></li>
-                    <li><a href="programs.html">Programs</a></li>
-                    <li><a href="partnerships.html">Partnerships</a></li>
-                    <li><a href="impact.html">Our Impact</a></li>
-                    <li><a href="events.html">Events</a></li>
-                    <li><a href="donate.html">Donate</a></li>
-                    <li><a href="contact.html">Contact</a></li>
+            <div class="footer__nav-col">
+                <h4 class="footer__title">Quick Links</h4>
+                <ul class="footer__links">
+                    <li><a href="index.html" class="footer__link">Home</a></li>
+                    <li><a href="about.html" class="footer__link">About Us</a></li>
+                    <li><a href="programs.html" class="footer__link">Programs</a></li>
+                    <li><a href="partnerships.html" class="footer__link">Partnerships</a></li>
+                    <li><a href="impact.html" class="footer__link">Our Impact</a></li>
+                    <li><a href="events.html" class="footer__link">Events</a></li>
+                    <li><a href="donate.html" class="footer__link">Donate</a></li>
+                    <li><a href="contact.html" class="footer__link">Contact</a></li>
                 </ul>
             </div>
-            <div class="footer-contact-col">
-                <h4 class="footer-title">Contact Us</h4>
-                <div class="footer-contact">
-                    <div class="contact-item">
+            <div class="footer__contact-col">
+                <h4 class="footer__title">Contact Us</h4>
+                <div class="footer__contact">
+                    <div class="footer__contact-item">
                         <i style="width:18px; height:18px;" class="fa-solid fa-phone"></i>
                         <a href="tel:+254700000000" style="color: inherit; text-decoration: none;">+254 700 000 000</a>
                     </div>
-                    <div class="contact-item">
+                    <div class="footer__contact-item">
                         <i style="width:18px; height:18px;" class="fa-solid fa-envelope"></i>
                         <span>info@hopebeyonddisability.org</span>
                     </div>
                 </div>
-                <div class="footer-socials">
-                    <a href="https://facebook.com/hopebeyonddisability" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Facebook">
+                <div class="footer__socials">
+                    <a href="https://facebook.com/hopebeyonddisability" target="_blank" rel="noopener noreferrer" class="footer__social-link" aria-label="Facebook">
                         <i style="width:18px; height:18px;" class="fa-brands fa-facebook"></i>
                     </a>
-                    <a href="https://instagram.com/hopebeyonddisability" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Instagram">
+                    <a href="https://instagram.com/hopebeyonddisability" target="_blank" rel="noopener noreferrer" class="footer__social-link" aria-label="Instagram">
                         <i style="width:18px; height:18px;" class="fa-brands fa-instagram"></i>
                     </a>
-                    <a href="https://tiktok.com/@hopebeyonddisability" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="TikTok">
+                    <a href="https://tiktok.com/@hopebeyonddisability" target="_blank" rel="noopener noreferrer" class="footer__social-link" aria-label="TikTok">
                         <i style="width:18px; height:18px;" class="fa-brands fa-tiktok"></i>
                     </a>
                 </div>
             </div>
         </div>
-        <div class="footer-bottom">
-            <p class="footer-copy">&copy; 2026 Hope Beyond Disability. All Rights Reserved.</p>
-            <div class="footer-legal">
-                <a href="privacy.html">Privacy Policy</a>
-                <a href="safeguarding.html">Child Protection & Safeguarding Policy</a>
+        <div class="footer__bottom">
+            <p class="footer__copy">&copy; 2026 Hope Beyond Disability. All Rights Reserved.</p>
+            <div class="footer__legal">
+                <a href="privacy.html" class="footer__legal-link">Privacy Policy</a>
+                <a href="safeguarding.html" class="footer__legal-link">Child Protection & Safeguarding Policy</a>
             </div>
         </div>
     </footer>

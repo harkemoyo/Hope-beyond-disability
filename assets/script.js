@@ -3,39 +3,39 @@ window.addEventListener('scroll', () => {
     const navbar = document.querySelector('.navbar');
     if (navbar) {
         if (window.scrollY > 50) {
-            navbar.classList.add('scrolled');
+            navbar.classList.add('navbar--scrolled');
         } else {
-            navbar.classList.remove('scrolled');
+            navbar.classList.remove('navbar--scrolled');
         }
     }
 });
 
 // Mobile Navigation Toggle
-const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
-const navLinks = document.querySelector('.nav-links');
+const mobileMenuBtn = document.querySelector('.navbar__toggle');
+const navLinks = document.querySelector('.navbar__links');
 
 if (mobileMenuBtn && navLinks) {
     mobileMenuBtn.addEventListener('click', () => {
-        navLinks.classList.toggle('active');
-        mobileMenuBtn.classList.toggle('open');
+        navLinks.classList.toggle('navbar__links--active');
+        mobileMenuBtn.classList.toggle('navbar__toggle--open');
     });
 
     // Close mobile menu when a link is clicked
-    const links = document.querySelectorAll('.nav-links a');
+    const links = document.querySelectorAll('.navbar__link');
     links.forEach(link => {
         link.addEventListener('click', () => {
-            navLinks.classList.remove('active');
-            mobileMenuBtn.classList.remove('open');
+            navLinks.classList.remove('navbar__links--active');
+            mobileMenuBtn.classList.remove('navbar__toggle--open');
         });
     });
 }
 
 // Video Player Overlay Play Trigger (Index page)
-const videoBlock = document.getElementById('videoBlock');
+const videoBlock = document.querySelector('.video-block');
 if (videoBlock) {
-    const videoThumbnail = videoBlock.querySelector('.video-thumbnail');
-    const videoOverlay = videoBlock.querySelector('.video-overlay');
-    const videoIframe = document.getElementById('videoIframe');
+    const videoThumbnail = videoBlock.querySelector('.video-block__thumbnail');
+    const videoOverlay = videoBlock.querySelector('.video-block__overlay');
+    const videoIframe = videoBlock ? videoBlock.querySelector('.video-block__iframe') : null;
 
     if (videoThumbnail && videoOverlay && videoIframe) {
         videoBlock.addEventListener('click', () => {
@@ -70,15 +70,15 @@ document.addEventListener('DOMContentLoaded', () => {
 const faqItems = document.querySelectorAll('.faq-item');
 if (faqItems.length > 0) {
     faqItems.forEach(item => {
-        const question = item.querySelector('.faq-question');
+        const question = item.querySelector('.faq-item__question');
         if (question) {
             question.addEventListener('click', () => {
                 faqItems.forEach(otherItem => {
                     if (otherItem !== item) {
-                        otherItem.classList.remove('active');
+                        otherItem.classList.remove('faq-item--active');
                     }
                 });
-                item.classList.toggle('active');
+                item.classList.toggle('faq-item--active');
             });
         }
     });
