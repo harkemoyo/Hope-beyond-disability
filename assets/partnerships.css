@@ -1,9 +1,7 @@
 /* Partnerships Page Specific Styles */
 
-/* Partner Logos Section BEM */
 .partner-logos {
-    margin-top: 80px;
-    padding: 60px 24px;
+    padding: 2rem;
     background: var(--light-bg-2);
     border-radius: 16px;
     border: 1px solid rgba(18, 18, 18, 0.05);

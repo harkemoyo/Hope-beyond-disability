@@ -493,7 +493,7 @@ h1, h2, h3, h4 {
 /* Page Header Block */
 .page-header {
     background-color: var(--light-bg-2);
-    padding: 160px 24px 80px 24px;
+    padding: 10rem 2rem 2rem 2rem;
     text-align: center;
     border-bottom: 1px solid rgba(18, 18, 18, 0.05);
     display: flex;
@@ -517,7 +517,7 @@ h1, h2, h3, h4 {
 
 .page-header--has-image {
     position: relative;
-    padding: 160px 24px 100px 24px;
+    padding: 12rem 2rem 4rem 2rem;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -552,10 +552,10 @@ h1, h2, h3, h4 {
 .page-content-wrapper {
     max-width: 1000px;
     margin: 0 auto;
-    padding: 80px 24px;
+    padding: 2rem;
     display: flex;
     flex-direction: column;
-    gap: 48px;
+    gap: 3rem;
 }
 
 /* Layout stack spacing classes */
@@ -737,6 +737,10 @@ h1, h2, h3, h4 {
     gap: 24px;
     list-style: none;
     padding: 0;
+}
+
+.values-grid--1col {
+    grid-template-columns: 1fr;
 }
 
 .value-card {

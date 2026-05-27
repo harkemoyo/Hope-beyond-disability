@@ -34,7 +34,8 @@
 
 /* FAQ Accordion Styling BEM */
 .faq {
-    padding: 80px 24px;
+    padding-block: 2rem;
+    padding-inline: 2rem;
     background: var(--light-bg-2);
     border-top: 1px solid rgba(18, 18, 18, 0.05);
 }
@@ -96,6 +97,6 @@
 /* Mobile Media Queries Overrides */
 @media (max-width: 768px) {
     .faq {
-        padding-block: 60px;
+        padding-block: 2rem;
     }
 }
