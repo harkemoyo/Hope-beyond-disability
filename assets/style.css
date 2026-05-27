@@ -81,7 +81,6 @@ body {
 .container {
     max-width: 1200px;
     margin: 0 auto;
-    padding-inline: 2rem;
     padding-block: 2rem;
 }
 main {
@@ -133,6 +132,10 @@ h1, h2, h3 {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-inline: 1.5rem;
+    padding-block: .5rem;
 }
 
 .logo {
