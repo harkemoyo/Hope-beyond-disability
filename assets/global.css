@@ -708,7 +708,9 @@ p{
     gap: 3rem;
     padding-inline: 2rem;
 }
-
+.container-narrow{
+    max-width: 1000px;
+}
 .section-container-50 > div {
     flex: 1;
 }
