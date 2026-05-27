@@ -374,6 +374,7 @@ h1, h2, h3 {
     background-color: var(--light-bg-1);
     color: var(--text-dark);
     padding-inline: 2rem;
+    padding-block: 2rem;
 }
 
 .section-text-col {
