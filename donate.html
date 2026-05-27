@@ -38,7 +38,7 @@
     </header>
 
     <!-- Page Header -->
-    <section class="page-header page-header--has-image" style="background-image: url('assets/images/caregiver_child.webp');">
+    <section class="page-header page-header--has-image page-header--donate">
         <h1>Support Our Work</h1>
         <p>Your generous contribution directly funds skills training, medical support, advocacy campaigns, and Christian fellowship for families and caregivers of children living with disabilities.</p>
     </section>
@@ -49,7 +49,7 @@
             <!-- Left Info Panel -->
             <div class="content-section">
                 <h2>Your Impact</h2>
-                <p style="font-size: 1.76rem; line-height: 1.7; color: var(--text-muted-dark); margin-bottom: 20px;">
+                <p class="lead-text lead-text--no-margin">
                     When you give to Hope Beyond Disability, you are investing in a future where stigma is dismantled and families are built up. 100% of your donation goes directly toward funding local community development operations in Kenya.
                 </p>
                 <div class="info-card">
@@ -63,10 +63,10 @@
                 </div>
 
                 <!-- Receipt Instructions -->
-                <div class="value-card" style="background: rgba(251, 192, 45, 0.05); border-left: 4px solid var(--primary-gold); padding: 24px;">
-                    <strong style="color: var(--text-dark); font-size: 1.68rem; display: block; margin-bottom: 8px;">Confirming Your Gift</strong>
-                    <p style="font-size: 1.52rem; color: var(--text-muted-dark); line-height: 1.6; margin: 0;">
-                        After making your contribution, please send a screenshot of the M-Pesa confirmation message or details of your bank transfer via WhatsApp to <a href="https://wa.me/254700000000" target="_blank" rel="noopener noreferrer" style="color: var(--primary-red); font-weight: 600; text-decoration: none;">+254 700 000 000</a> or email <a href="mailto:info@hopebeyonddisability.org" style="color: var(--primary-red); font-weight: 600; text-decoration: none;">info@hopebeyonddisability.org</a> so we can send you an official donation receipt and acknowledgment.
+                <div class="value-card value-card--gold-tint">
+                    <strong class="value-card__title">Confirming Your Gift</strong>
+                    <p>
+                        After making your contribution, please send a screenshot of the M-Pesa confirmation message or details of your bank transfer via WhatsApp to <a href="https://wa.me/254700000000" target="_blank" rel="noopener noreferrer" class="text-link">+254 700 000 000</a> or email <a href="mailto:info@hopebeyonddisability.org" class="text-link">info@hopebeyonddisability.org</a> so we can send you an official donation receipt and acknowledgment.
                     </p>
                 </div>
             </div>
@@ -78,16 +78,16 @@
                 <!-- Card Option 1: Mobile Money (M-Pesa Kenya) -->
                 <div class="payment-card">
                     <h3 class="payment-card__title">
-                        <i style="color: var(--primary-gold); margin-right: 8px; vertical-align: middle;" class="fa-solid fa-mobile-screen-button"></i>Mobile Money (M-Pesa)
+                        <i class="fa-solid fa-mobile-screen-button icon--gold"></i>Mobile Money (M-Pesa)
                     </h3>
-                    <div class="payment-card__body" style="gap: 12px; margin-top: 12px;">
+                    <div class="payment-card__body">
                         <div>
-                            <p style="font-size: 1.52rem; margin-bottom: 6px;">1. Go to M-Pesa > Lipa na M-Pesa > Paybill</p>
-                            <p style="font-size: 1.52rem; margin-bottom: 6px;">2. Enter Business Number (Paybill):</p>
-                            <p style="font-family: monospace; font-size: 1.8rem; font-weight: bold; color: var(--primary-red); background: rgba(211, 47, 47, 0.05); padding: 10px 14px; border-radius: 6px; margin: 0 0 10px 0; display: inline-block;">600100</p>
-                            <p style="font-size: 1.52rem; margin-bottom: 6px;">3. Enter Account Number:</p>
-                            <p style="font-family: monospace; font-size: 1.8rem; font-weight: bold; color: var(--primary-gold-hover); background: rgba(251, 192, 45, 0.08); padding: 10px 14px; border-radius: 6px; margin: 0; display: inline-block;">202509</p>
-                            <p style="font-size: 1.4rem; color: var(--text-muted-dark); margin-top: 8px;">Account name will display as: <strong>HOPE BEYOND DISABILITY</strong></p>
+                            <p class="payment-card__step-text">1. Go to M-Pesa > Lipa na M-Pesa > Paybill</p>
+                            <p class="payment-card__step-text">2. Enter Business Number (Paybill):</p>
+                            <p class="payment-code payment-code--red">600100</p>
+                            <p class="payment-card__step-text">3. Enter Account Number:</p>
+                            <p class="payment-code payment-code--gold">202509</p>
+                            <p class="payment-card__note">Account name will display as: <strong>HOPE BEYOND DISABILITY</strong></p>
                         </div>
                     </div>
                 </div>
@@ -95,9 +95,9 @@
                 <!-- Card Option 2: Bank Transfer -->
                 <div class="payment-card">
                     <h3 class="payment-card__title">
-                        <i style="color: var(--primary-red); margin-right: 8px; vertical-align: middle;" class="fa-solid fa-landmark"></i>Direct Bank Transfer
+                        <i class="fa-solid fa-landmark icon--red"></i>Direct Bank Transfer
                     </h3>
-                    <div class="table-responsive" style="margin-top: 12px;">
+                    <div class="table-responsive">
                         <table class="payment-table">
                             <tr>
                                 <td>Bank Name:</td>
@@ -110,13 +110,13 @@
                             <tr>
                                 <td>Account Numbers:</td>
                                 <td>
-                                    <div style="margin-bottom: 4px;">KES: <span style="font-family: monospace; font-weight: bold;">0100016722302</span></div>
-                                    <div>USD: <span style="font-family: monospace; font-weight: bold;">0100016722329</span></div>
+                                    <div class="payment-table__account-group">KES: <span class="payment-table__mono-bold">0100016722302</span></div>
+                                    <div>USD: <span class="payment-table__mono-bold">0100016722329</span></div>
                                 </td>
                             </tr>
                             <tr>
                                 <td>SWIFT Code:</td>
-                                <td style="font-family: monospace; font-weight: bold;">SBICKENX</td>
+                                <td class="payment-table__mono-bold">SBICKENX</td>
                             </tr>
                             <tr>
                                 <td>Bank Code:</td>
@@ -128,7 +128,7 @@
                             </tr>
                             <tr>
                                 <td>Branch Code:</td>
-                                <td style="font-family: monospace;">KE0010004</td>
+                                <td class="payment-table__mono">KE0010004</td>
                             </tr>
                         </table>
                     </div>
@@ -160,23 +160,23 @@
                 <h4 class="footer__title">Contact Us</h4>
                 <div class="footer__contact">
                     <div class="footer__contact-item">
-                        <i style="width:18px; height:18px;" class="fa-solid fa-phone"></i>
-                        <a href="tel:+254700000000" style="color: inherit; text-decoration: none;">+254 700 000 000</a>
+                        <i class="fa-solid fa-phone footer__icon"></i>
+                        <a href="tel:+254700000000" class="footer__contact-link">+254 700 000 000</a>
                     </div>
                     <div class="footer__contact-item">
-                        <i style="width:18px; height:18px;" class="fa-solid fa-envelope"></i>
+                        <i class="fa-solid fa-envelope footer__icon"></i>
                         <span>info@hopebeyonddisability.org</span>
                     </div>
                 </div>
                 <div class="footer__socials">
                     <a href="https://facebook.com/hopebeyonddisability" target="_blank" rel="noopener noreferrer" class="footer__social-link" aria-label="Facebook">
-                        <i style="width:18px; height:18px;" class="fa-brands fa-facebook"></i>
+                        <i class="fa-brands fa-facebook footer__icon"></i>
                     </a>
                     <a href="https://instagram.com/hopebeyonddisability" target="_blank" rel="noopener noreferrer" class="footer__social-link" aria-label="Instagram">
-                        <i style="width:18px; height:18px;" class="fa-brands fa-instagram"></i>
+                        <i class="fa-brands fa-instagram footer__icon"></i>
                     </a>
                     <a href="https://tiktok.com/@hopebeyonddisability" target="_blank" rel="noopener noreferrer" class="footer__social-link" aria-label="TikTok">
-                        <i style="width:18px; height:18px;" class="fa-brands fa-tiktok"></i>
+                        <i class="fa-brands fa-tiktok footer__icon"></i>
                     </a>
                 </div>
             </div>

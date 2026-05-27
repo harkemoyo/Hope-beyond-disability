@@ -51,3 +51,66 @@
     color: var(--text-dark);
     font-weight: 500;
 }
+
+/* Donate Page Refactored Styles */
+.page-header--donate {
+    background-image: url('images/caregiver_child.webp');
+}
+
+.value-card--gold-tint {
+    background: rgba(251, 192, 45, 0.05);
+}
+
+.payment-card__body {
+    margin-top: 12px;
+}
+
+.payment-card__step-text {
+    font-size: 1.52rem;
+    margin-bottom: 6px;
+}
+
+.payment-code {
+    font-family: monospace;
+    font-size: 1.8rem;
+    font-weight: bold;
+    padding: 10px 14px;
+    border-radius: 6px;
+    display: inline-block;
+}
+
+.payment-code--red {
+    color: var(--primary-red);
+    background: rgba(211, 47, 47, 0.05);
+    margin: 0 0 10px 0;
+}
+
+.payment-code--gold {
+    color: var(--primary-gold-hover);
+    background: rgba(251, 192, 45, 0.08);
+    margin: 0;
+}
+
+.payment-card__note {
+    font-size: 1.4rem;
+    color: var(--text-muted-dark);
+    margin-top: 8px;
+}
+
+.payment-table__account-group {
+    margin-bottom: 4px;
+}
+
+.payment-table__mono-bold {
+    font-family: monospace;
+    font-weight: bold;
+}
+
+.payment-table__mono {
+    font-family: monospace;
+}
+
+.payment-card .table-responsive {
+    margin-top: 12px;
+}
+

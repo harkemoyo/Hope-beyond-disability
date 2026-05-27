@@ -1000,3 +1000,125 @@ section[id] {
     }
 }
 
+/* Global Refactored Styles (Inline Style Removals) */
+.footer__icon {
+    width: 18px;
+    height: 18px;
+    display: inline-block;
+    text-align: center;
+}
+
+.footer__contact-link {
+    color: inherit;
+    text-decoration: none;
+}
+
+.icon--inline {
+    width: 16px;
+    height: 16px;
+    display: inline-block;
+}
+
+.icon--gold {
+    color: var(--primary-gold);
+}
+
+.icon--red {
+    color: var(--primary-red);
+}
+
+.lead-text {
+    font-size: 1.76rem;
+    line-height: 1.7;
+    color: var(--text-muted-dark);
+    margin-bottom: 20px;
+}
+
+.lead-text--no-margin {
+    margin-bottom: 0;
+}
+
+.text-link {
+    color: var(--primary-red);
+    font-weight: 600;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.text-link:hover {
+    color: var(--primary-red-hover);
+    text-decoration: underline;
+}
+
+.contact-form-card__subtitle {
+    font-size: 1.52rem;
+    color: var(--text-muted-dark);
+    margin-bottom: 8px;
+    margin-top: -12px;
+}
+
+.contact-form__submit {
+    width: 100%;
+    border: none;
+    font-size: 1.6rem;
+}
+
+.section-container-50--stretch {
+    align-items: stretch;
+}
+
+/* Coming Soon Block */
+.coming-soon-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 40vh;
+    padding: 60px 24px;
+}
+
+.coming-soon-card {
+    max-width: 680px;
+    text-align: center;
+    padding: 48px 32px;
+}
+
+.coming-soon-card--gold {
+    border-top: 4px solid var(--primary-gold);
+}
+
+.coming-soon-card--red {
+    border-top: 4px solid var(--primary-red);
+}
+
+.coming-soon-card__icon-bubble {
+    margin: 0 auto 20px auto;
+    width: 64px;
+    height: 64px;
+    font-size: 2.4rem;
+}
+
+.coming-soon-card__icon {
+    width: 32px;
+    height: 32px;
+}
+
+.coming-soon-card__title {
+    font-size: 2.8rem;
+    font-weight: 700;
+    color: var(--text-dark);
+    margin-bottom: 16px;
+}
+
+.coming-soon-card__text {
+    font-size: 1.76rem;
+    line-height: 1.7;
+    color: var(--text-muted-dark);
+    margin-bottom: 24px;
+}
+
+.coming-soon-card__btn {
+    display: inline-block;
+    text-decoration: none;
+}
+
+

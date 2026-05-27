@@ -94,9 +94,31 @@
     transform: rotate(180deg);
 }
 
-/* Mobile Media Queries Overrides */
 @media (max-width: 768px) {
     .faq {
         padding-block: 2rem;
     }
 }
+
+/* Contact Page Refactored Styles */
+.contact-intro-text {
+    margin-bottom: 24px;
+}
+
+.contact-info__value {
+    transition: color 0.3s ease;
+}
+
+.contact-info__value:hover {
+    color: var(--primary-red);
+}
+
+.faq-item__icon {
+    width: 20px;
+    height: 20px;
+}
+
+.contact-form__submit {
+    margin-bottom: 12px;
+}
+

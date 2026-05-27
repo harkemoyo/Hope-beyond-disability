@@ -49,26 +49,26 @@
             <!-- Left Info Panel (Grouped in Card) -->
             <div class="content-section">
                 <h2>Get in Touch Directly</h2>
-                <p style="margin-bottom: 24px;">
+                <p class="contact-intro-text">
                     We would love to hear from you. Feel free to contact our support desk or schedule a visit to our community center.
                 </p>
                 <div class="contact-info">
-                    <div style="display: flex; align-items: center; gap: 16px;">
+                    <div class="contact-info__item">
                         <div class="icon-bubble">
                             <i class="fa-solid fa-phone"></i>
                         </div>
                         <div>
-                            <strong style="display: block; font-size: 1.36rem; color: var(--text-muted-dark);">Call or WhatsApp</strong>
-                            <a href="https://wa.me/254700000000" target="_blank" rel="noopener noreferrer" style="font-size: 1.6rem; color: var(--text-dark); font-weight: 600; text-decoration: none;">+254 700 000 000</a>
+                            <strong class="contact-info__label">Call or WhatsApp</strong>
+                            <a href="https://wa.me/254700000000" target="_blank" rel="noopener noreferrer" class="contact-info__value">+254 700 000 000</a>
                         </div>
                     </div>
-                    <div style="display: flex; align-items: center; gap: 16px;">
+                    <div class="contact-info__item">
                         <div class="icon-bubble icon-bubble--gold">
                             <i class="fa-solid fa-envelope"></i>
                         </div>
                         <div>
-                            <strong style="display: block; font-size: 1.36rem; color: var(--text-muted-dark);">Official Email</strong>
-                            <a href="mailto:info@hopebeyonddisability.org" style="font-size: 1.6rem; color: var(--text-dark); font-weight: 600; text-decoration: none;">info@hopebeyonddisability.org</a>
+                            <strong class="contact-info__label">Official Email</strong>
+                            <a href="mailto:info@hopebeyonddisability.org" class="contact-info__value">info@hopebeyonddisability.org</a>
                         </div>
                     </div>
                 </div>
@@ -104,7 +104,7 @@
                         <label for="message" class="form-field__label">Message</label>
                         <textarea id="message" name="message" class="form-field__textarea" rows="5" placeholder="How can we help you?" required></textarea>
                     </div>
-                    <button type="submit" class="btn btn--solid" style="width: 100%; border: none; font-size: 1.6rem; margin-bottom: 12px;">Submit Message</button>
+                    <button type="submit" class="btn btn--solid contact-form__submit">Submit Message</button>
                 </form>
             </div>
         </div>
@@ -117,7 +117,7 @@
                 <div class="faq-item">
                     <div class="faq-item__question">
                         <span>Are you a registered organization?</span>
-                        <i class="faq-item__icon fa-solid fa-chevron-down" style="width: 20px; height: 20px;"></i>
+                        <i class="faq-item__icon fa-solid fa-chevron-down"></i>
                     </div>
                     <div class="faq-item__answer">
                         <p>Yes, Hope Beyond Disability is fully registered in Kenya as a Community Based Organization (CBO). We operate under local social development regulations and maintain strict audit and compliance standards.</p>
@@ -127,7 +127,7 @@
                 <div class="faq-item">
                     <div class="faq-item__question">
                         <span>Where are you located?</span>
-                        <i class="faq-item__icon fa-solid fa-chevron-down" style="width: 20px; height: 20px;"></i>
+                        <i class="faq-item__icon fa-solid fa-chevron-down"></i>
                     </div>
                     <div class="faq-item__answer">
                         <p>Our administrative office and primary community outreach center are located in Nairobi, Kenya (specifically Karen and surrounding municipal areas). We conduct workshops and host caregiver groups throughout these regions.</p>
@@ -137,7 +137,7 @@
                 <div class="faq-item">
                     <div class="faq-item__question">
                         <span>Can I donate non-monetary items?</span>
-                        <i class="faq-item__icon fa-solid fa-chevron-down" style="width: 20px; height: 20px;"></i>
+                        <i class="faq-item__icon fa-solid fa-chevron-down"></i>
                     </div>
                     <div class="faq-item__answer">
                         <p>Absolutely! We welcome in-kind donations such as physical mobility aids (wheelchairs, crutches, walking frames), educational toys, sensory learning items, children's clothes, and vocational training supplies (sewing machines, scissors, sewing fabrics). Please email us at info@hopebeyonddisability.org to coordinate drop-off or pickup.</p>
@@ -147,7 +147,7 @@
                 <div class="faq-item">
                     <div class="faq-item__question">
                         <span>How are financial donations utilized?</span>
-                        <i class="faq-item__icon fa-solid fa-chevron-down" style="width: 20px; height: 20px;"></i>
+                        <i class="faq-item__icon fa-solid fa-chevron-down"></i>
                     </div>
                     <div class="faq-item__answer">
                         <p>100% of public donations are used directly on the ground to fund caregiver vocational skills training, family discipleship retreats, purchasing mobility aids for children, and staging community anti-stigma awareness campaigns.</p>
@@ -180,23 +180,23 @@
                 <h4 class="footer__title">Contact Us</h4>
                 <div class="footer__contact">
                     <div class="footer__contact-item">
-                        <i style="width:18px; height:18px;" class="fa-solid fa-phone"></i>
-                        <a href="tel:+254700000000" style="color: inherit; text-decoration: none;">+254 700 000 000</a>
+                        <i class="fa-solid fa-phone footer__icon"></i>
+                        <a href="tel:+254700000000" class="footer__contact-link">+254 700 000 000</a>
                     </div>
                     <div class="footer__contact-item">
-                        <i style="width:18px; height:18px;" class="fa-solid fa-envelope"></i>
+                        <i class="fa-solid fa-envelope footer__icon"></i>
                         <span>info@hopebeyonddisability.org</span>
                     </div>
                 </div>
                 <div class="footer__socials">
                     <a href="https://facebook.com/hopebeyonddisability" target="_blank" rel="noopener noreferrer" class="footer__social-link" aria-label="Facebook">
-                        <i style="width:18px; height:18px;" class="fa-brands fa-facebook"></i>
+                        <i class="fa-brands fa-facebook footer__icon"></i>
                     </a>
                     <a href="https://instagram.com/hopebeyonddisability" target="_blank" rel="noopener noreferrer" class="footer__social-link" aria-label="Instagram">
-                        <i style="width:18px; height:18px;" class="fa-brands fa-instagram"></i>
+                        <i class="fa-brands fa-instagram footer__icon"></i>
                     </a>
                     <a href="https://tiktok.com/@hopebeyonddisability" target="_blank" rel="noopener noreferrer" class="footer__social-link" aria-label="TikTok">
-                        <i style="width:18px; height:18px;" class="fa-brands fa-tiktok"></i>
+                        <i class="fa-brands fa-tiktok footer__icon"></i>
                     </a>
                 </div>
             </div>

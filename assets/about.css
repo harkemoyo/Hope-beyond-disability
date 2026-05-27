@@ -152,3 +152,35 @@
         gap: 20px;
     }
 }
+
+/* About Page Refactored Styles */
+.page-header--about {
+    background-image: url('images/about_hero.webp');
+}
+
+.about-story__text-col {
+    flex: 1.2;
+}
+
+.about-story__text-col p {
+    font-size: 1.76rem;
+    line-height: 1.7;
+    color: var(--text-muted-dark);
+}
+
+.about-story__text-col p:not(:last-child) {
+    margin-bottom: 20px;
+}
+
+.about-story__img-col {
+    flex: 0.8;
+    display: flex;
+    align-items: center;
+}
+
+.about-story__image {
+    height: 100%;
+    min-height: 380px;
+    object-fit: cover;
+}
+

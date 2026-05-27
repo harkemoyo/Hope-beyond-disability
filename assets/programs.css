@@ -109,3 +109,19 @@
         border-bottom: 1px solid rgba(18, 18, 18, 0.05);
     }
 }
+
+/* Programs Page Refactored Styles */
+.page-header--programs {
+    background-image: url('images/discipleship_circle.webp');
+}
+
+.section-text-col p {
+    font-size: 1.68rem;
+    line-height: 1.7;
+    color: var(--text-muted-dark);
+}
+
+.section-text-col p:not(:last-child) {
+    margin-bottom: 16px;
+}
+

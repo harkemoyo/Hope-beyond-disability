@@ -38,3 +38,13 @@
     text-align: center;
     border: 1px dashed rgba(18, 18, 18, 0.15);
 }
+
+/* Partnerships Page Refactored Styles */
+.page-header--partnerships {
+    background-image: url('images/advocacy_meeting.webp');
+}
+
+.contact-form__submit {
+    margin-top: 10px;
+}
+
