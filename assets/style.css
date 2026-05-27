@@ -152,7 +152,7 @@ h1, h2, h3 {
 
 .nav-links {
     display: flex;
-    gap: 32px;
+    gap: 2rem;
 }
 
 .nav-links a {
@@ -160,6 +160,7 @@ h1, h2, h3 {
     text-decoration: none;
     font-weight: 500;
     position: relative;
+    font-size: 1.76rem;
     padding: 8px 0;
     transition: color var(--transition-speed) ease;
 }
