@@ -362,7 +362,7 @@ h1, h2, h3 {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 60px;
+    gap: 3rem;
 }
 
 .section-container-50 > div {
@@ -1008,7 +1008,7 @@ h1, h2, h3 {
     }
     
     .why-it-matters, .programs-section, .identity-section, .cta-section {
-        padding: 60px 24px;
+        padding-inline: 2rem;
     }
     
     .programs-grid, .cta-grid {
