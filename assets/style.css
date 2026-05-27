@@ -81,7 +81,6 @@ body {
 .container {
     max-width: 1200px;
     margin: 0 auto;
-    padding-block: 2rem;
 }
 main {
     grid-row: 3;
@@ -134,8 +133,8 @@ h1, h2, h3 {
     align-items: center;
     max-width: 1200px;
     margin: 0 auto;
-    padding-inline: 1.5rem;
-    padding-block: .5rem;
+    padding-inline: 2rem;
+    padding-block: 1rem;
 }
 
 .logo {
@@ -374,7 +373,7 @@ h1, h2, h3 {
 .why-it-matters {
     background-color: var(--light-bg-1);
     color: var(--text-dark);
-    padding: 80px 24px;
+    padding-inline: 2rem;
 }
 
 .section-text-col {
@@ -410,7 +409,7 @@ h1, h2, h3 {
 .programs-section {
     background-color: var(--light-bg-1);
     color: var(--text-dark);
-    padding: 80px 24px;
+    padding-inline: 2rem;
     display: flex;
     flex-direction: column;
     gap: 60px;
