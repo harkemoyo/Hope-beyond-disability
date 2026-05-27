@@ -83,6 +83,7 @@ main {
     grid-row: 3;
     display: flex;
     flex-direction: column;
+    gap: 3rem;
 }
 
 .footer {
@@ -216,7 +217,7 @@ h1, h2, h3 {
     align-items: center;
     justify-content: center;
     padding: 0 24px;
-    background-image: url('hero_background.webp');
+    background-image: url('images/hero_background.webp');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
