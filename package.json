@@ -1,0 +1,26 @@
+{
+  "name": "hope-beyond",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "serve": "vite preview"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/harkemoyo/Hope-beyond-disability.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/harkemoyo/Hope-beyond-disability/issues"
+  },
+  "homepage": "https://github.com/harkemoyo/Hope-beyond-disability#readme",
+  "devDependencies": {
+    "vite": "^8.0.14"
+  }
+}
