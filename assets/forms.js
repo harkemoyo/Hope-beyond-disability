@@ -2,7 +2,7 @@
 const SUPABASE_URL = 'https://fgqzfdrfrwmugmaztruv.supabase.co';
 const SUPABASE_ANON_KEY = 'sb_publishable_LqyGXwtLU-pHxLsca0t_iA_hyRMCmdo';
 
-let supabase;
+let supabaseClient;
 
 document.addEventListener('DOMContentLoaded', () => {
     // Check if Supabase SDK is loaded
@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
         alert('Error: Supabase database connection could not be loaded. Please disable adblockers or check your internet connection.');
         console.error('Supabase SDK not loaded. Please include the CDN script tag.');
     } else {
-        supabase = window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
+        supabaseClient = window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
         console.log("Supabase successfully initialized!");
     }
 
@@ -31,6 +31,11 @@ document.addEventListener('DOMContentLoaded', () => {
         contactForm.addEventListener('submit', async (e) => {
             e.preventDefault();
 
+            if (!supabaseClient) {
+                showFeedback(feedbackEl, 'Database connection failed. Please try again later.', 'error');
+                return;
+            }
+
             // Set loading state
             const submitBtn = contactForm.querySelector('button[type="submit"]');
             const originalText = submitBtn.textContent;
@@ -46,7 +51,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const message = document.getElementById('message').value.trim();
 
             try {
-                const { error } = await supabase
+                const { error } = await supabaseClient
                     .from('contact_submissions')
                     .insert([{ name, email, phone, subject, message }]);
 
@@ -81,6 +86,11 @@ document.addEventListener('DOMContentLoaded', () => {
         partnershipForm.addEventListener('submit', async (e) => {
             e.preventDefault();
 
+            if (!supabaseClient) {
+                showFeedback(feedbackEl, 'Database connection failed. Please try again later.', 'error');
+                return;
+            }
+
             // Set loading state
             const submitBtn = partnershipForm.querySelector('button[type="submit"]');
             const originalText = submitBtn.textContent;
@@ -97,7 +107,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const partnership_type = document.getElementById('partnerType').value;
 
             try {
-                const { error } = await supabase
+                const { error } = await supabaseClient
                     .from('partnership_inquiries')
                     .insert([{ name, email, phone, location, institution, partnership_type }]);
 
