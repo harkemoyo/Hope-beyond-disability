@@ -104,7 +104,7 @@
                 <p class="contact-form-card__subtitle">
                     Fill out the form below to share how you or your organization would like to collaborate with Hope Beyond Disability.
                 </p>
-                <form id="partnershipForm" class="contact-form" action="https://formspree.io/f/placeholder_id" method="POST" data-netlify="true" name="partnership-inquiry">
+                <form id="partnershipForm" class="contact-form">
                     <div class="form-field">
                         <label for="partnerName" class="form-field__label">Full Name / Contact Person</label>
                         <input type="text" id="partnerName" name="name" class="form-field__input" placeholder="Your name" required>
@@ -211,6 +211,10 @@
     </footer>
 </div>
 
+    <!-- Supabase JS Client Library CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <!-- Forms Submission Handler -->
+    <script src="assets/forms.js" defer></script>
     <!-- Lucide Icons script -->
     <script src="assets/script.js" defer></script>
 </body>
