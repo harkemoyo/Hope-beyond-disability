@@ -21,7 +21,14 @@
     background: var(--light-bg-1);
     padding: 20px;
     border-radius: 12px;
+    border: 1px solid rgba(18, 18, 18, 0.05);
     border-left: 3px solid var(--primary-red);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.objective-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.04);
 }
 
 .objective-card--gold {
@@ -179,5 +186,12 @@
     height: 100%;
     min-height: 380px;
     object-fit: cover;
+}
+
+@media (min-width: 769px) {
+    .objectives h2 {
+        text-align: center;
+        width: 100%;
+    }
 }
 

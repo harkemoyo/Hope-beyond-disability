@@ -769,6 +769,12 @@ p{
     font-size: 1.52rem;
     line-height: 1.6;
     color: var(--text-muted-dark);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.value-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.04);
 }
 
 .value-card--red {
