@@ -52,7 +52,7 @@
 
         <section class="section-container-50 grid grid--2col-reverse">
             <!-- Left Info Panel -->
-            <div class="content-section">
+            <div class="content-section sticky-col">
                 <h2>Your Impact</h2>
                 <p class="lead-text lead-text--no-margin">
                     When you give to Hope Beyond Disability, you are investing in a future where stigma is dismantled and families are built up. 100% of your donation goes directly toward funding local community development operations in Kenya.
@@ -68,7 +68,7 @@
                 </div>
 
                 <!-- Manual Donation Verification Form -->
-                <div style="display: none;" class="verification-form-container" style="margin-top: 32px;">
+                <div style="display: none;" class="verification-form-container">
                     <div class="verification-form__header">
                         <i class="fa-solid fa-receipt verification-form__icon" style="color: var(--primary-gold-hover);"></i>
                         <h3 class="verification-form__title">Claim Your Receipt</h3>
@@ -126,7 +126,7 @@
                     </h3>
                     
                     <div id="stkInputSection">
-                        <p class="payment-card__note" style="margin-top: 0; margin-bottom: 20px;">Fast, secure, and automatic. Enter your details and the PIN prompt will appear directly on your phone.</p>
+                        <p class="payment-card__note">Fast, secure, and automatic. Enter your details and the PIN prompt will appear directly on your phone.</p>
                         
                         <form class="verification-form" id="stkPushForm" onsubmit="handleStkPush(event)">
                             <div class="form-group">
@@ -171,15 +171,12 @@
                         <i class="fa-solid fa-money-bill-transfer icon--gold"></i>Manual M-Pesa (Paybill)
                     </h3>
                     <div class="payment-card__body">
-                        <div>
-                            <p class="payment-card__step-text">Prefer to do it manually? Go to M-Pesa > Lipa na M-Pesa > Paybill</p>
-                            <p class="payment-card__step-text" style="margin-top: 12px;">Business Number (Paybill):</p>
-                            <p class="payment-code payment-code--red">600100</p>
-                            <p class="payment-card__step-text">Account Number:</p>
-                            <p class="payment-code payment-code--gold">202509</p>
-                            <p class="payment-card__note">Account name will display as: <strong>HOPE BEYOND DISABILITY</strong></p>
-                            <p class="payment-card__note" style="margin-top: 12px; color: var(--primary-red);"><i class="fa-solid fa-circle-info"></i> Don't forget to claim your receipt using the form on the left!</p>
-                        </div>
+                        <p class="payment-card__step-text">Prefer to do it manually? Go to M-Pesa > Lipa na M-Pesa > Paybill</p>
+                        <p class="payment-card__step-text">Business Number (Paybill):</p>
+                        <p class="payment-code payment-code--red">600100</p>
+                        <p class="payment-card__step-text">Account Number:</p>
+                        <p class="payment-code payment-code--gold">202509</p>
+                        <p class="payment-card__note">Account name will display as: <strong>HOPE BEYOND DISABILITY</strong></p>
                     </div>
                 </div>
 
@@ -189,7 +186,7 @@
                         <i class="fa-brands fa-paypal" style="color: #00457C;"></i>PayPal
                     </h3>
                     <div class="payment-card__body">
-                        <p class="payment-card__note" style="margin-top: 0; margin-bottom: 16px;">Fast and secure international payments. Use your credit card or PayPal account.</p>
+                        <p class="payment-card__note">Fast and secure international payments. Use your credit card or PayPal account.</p>
                         <a href="https://paypal.com/donate" target="_blank" rel="noopener noreferrer" class="btn btn--paypal">
                             <i class="fa-brands fa-paypal"></i> Donate with PayPal
                         </a>

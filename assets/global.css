@@ -491,8 +491,16 @@ p{
 
 .grid--2col-reverse {
     grid-template-columns: 1.2fr 1fr;
-    gap: 40px;
-    align-items: start;
+    padding-block-end: 3rem;
+}
+
+/* Sticky secondary column utility — add .sticky-col to whichever column is shorter */
+@media (min-width: 769px) {
+    .sticky-col {
+        position: sticky;
+        top: 9rem; /* Clears the fixed navbar with breathing room */
+        align-self: start;
+    }
 }
 
 /* Page Header Block */
@@ -512,6 +520,7 @@ p{
     font-size: clamp(3.6rem, 5vw, 5.6rem);
     color: var(--text-dark);
     font-weight: 700;
+    line-height: 1.2;
 }
 
 .page-header__subtitle {
@@ -613,9 +622,6 @@ p{
     width: 100%;
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
-    margin-bottom: 15px;
-    border-radius: 8px;
-    border: 1px solid rgba(18, 18, 18, 0.05);
 }
 
 .icon-bubble {
@@ -638,7 +644,7 @@ p{
 .content-section {
     display: flex;
     flex-direction: column;
-    gap: 16px;
+    gap: .5rem;
     line-height: 1.8;
 }
 
@@ -647,6 +653,7 @@ p{
     font-weight: 700;
     color: var(--text-dark);
     letter-spacing: -0.01em;
+    line-height: 1.2;
 }
 
 .content-section h3 {
@@ -703,7 +710,7 @@ p{
     max-width: 1200px;
     margin: 0 auto;
     display: flex;
-    align-items: center;
+    align-items: flex-start; /* Changed from center so sticky works correctly */
     justify-content: space-between;
     gap: 3rem;
     padding-inline: 2rem;
@@ -714,6 +721,9 @@ p{
 .section-container-50 > div {
     flex: 1;
 }
+
+/* Auto-apply sticky to the last child of section-container-50 */
+/* NOTE: Use .sticky-col class instead for per-page control */
 
 .section-text-col {
     display: flex;
@@ -979,7 +989,6 @@ section[id] {
 
     .section-container-50 {
         flex-direction: column;
-        gap: 40px;
     }
     
     .section-container-50.reverse-mobile {
@@ -1041,7 +1050,6 @@ section[id] {
     font-size: 1.76rem;
     line-height: 1.7;
     color: var(--text-muted-dark);
-    margin-bottom: 20px;
 }
 
 .lead-text--no-margin {
