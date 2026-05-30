@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard - Hope Beyond</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Roboto+Slab:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/admin.css">
+    <link rel="icon" type="image/png" href="assets/images/hbd_logo.webp">
+</head>
+<body>
+
+    <!-- Login Modal -->
+    <div id="loginOverlay" class="login-overlay">
+        <div class="login-card">
+            <img src="assets/images/HBD_Logo_WhiteBackground.webp" alt="Hope Beyond" class="login-logo">
+            <h2>Admin Portal Access</h2>
+            <p>Please enter your secure admin code to view donations.</p>
+            <div class="form-group">
+                <input type="password" id="adminCodeInput" class="form-control" placeholder="Admin Code (Try: 1234)">
+            </div>
+            <p id="loginError" class="login-error">Invalid code. Please try again.</p>
+            <button id="loginBtn" class="btn btn--primary btn--full">Access Dashboard</button>
+        </div>
+    </div>
+
+    <!-- Dashboard Interface -->
+    <div id="dashboardApp" class="dashboard-wrapper hidden">
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <img src="assets/images/HBD_Logo_WhiteBackground.webp" alt="Logo" class="sidebar-logo">
+                <h2>Admin</h2>
+            </div>
+            <nav class="sidebar-nav">
+                <a href="#" class="nav-item active"><i class="fa-solid fa-hand-holding-dollar"></i> Donations</a>
+                <a href="#" class="nav-item"><i class="fa-solid fa-users"></i> Donors</a>
+                <a href="index.html" class="nav-item nav-item--back"><i class="fa-solid fa-arrow-left"></i> Back to Website</a>
+            </nav>
+        </aside>
+        
+        <main class="main-content">
+            <header class="topbar">
+                <h1>Donations Management</h1>
+                <div class="topbar-actions">
+                    <span class="admin-badge">Admin Logged In</span>
+                </div>
+            </header>
+            
+            <div class="dashboard-content">
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <h3>Total Donations</h3>
+                        <p class="stat-value">KES 145,000</p>
+                    </div>
+                    <div class="stat-card">
+                        <h3>Pending Verifications</h3>
+                        <p class="stat-value text-red">2</p>
+                    </div>
+                </div>
+
+                <div class="table-container">
+                    <div class="table-header">
+                        <h2>Recent Donations</h2>
+                        <input type="text" placeholder="Search by Transaction ID..." class="search-input">
+                    </div>
+                    <table class="data-table">
+                        <thead>
+                            <tr>
+                                <th>Donor Name</th>
+                                <th>Email</th>
+                                <th>Method</th>
+                                <th>Amount</th>
+                                <th>Transaction Code</th>
+                                <th>Privacy</th>
+                                <th>Status</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- Mock Data Row 1 (Pending M-Pesa) -->
+                            <tr>
+                                <td>John Doe</td>
+                                <td>john@example.com</td>
+                                <td><span class="method-badge method-badge--mpesa">M-Pesa</span></td>
+                                <td>KES 5,000</td>
+                                <td class="tx-code">QWE123RTY</td>
+                                <td><span class="privacy-badge privacy-badge--public">Public</span></td>
+                                <td><span class="status-badge status-badge--pending">Pending</span></td>
+                                <td>
+                                    <button class="action-btn action-btn--verify" onclick="verifyDonation(this)">Verify</button>
+                                </td>
+                            </tr>
+                            <!-- Mock Data Row 2 (Pending Anonymous) -->
+                            <tr>
+                                <td>Jane Smith</td>
+                                <td>jane.smith@example.com</td>
+                                <td><span class="method-badge method-badge--mpesa">M-Pesa</span></td>
+                                <td>KES 10,000</td>
+                                <td class="tx-code">ASD456FGH</td>
+                                <td><span class="privacy-badge privacy-badge--anonymous">Anonymous</span></td>
+                                <td><span class="status-badge status-badge--pending">Pending</span></td>
+                                <td>
+                                    <button class="action-btn action-btn--verify" onclick="verifyDonation(this)">Verify</button>
+                                </td>
+                            </tr>
+                            <!-- Mock Data Row 3 (Verified Bank) -->
+                            <tr>
+                                <td>David Omondi</td>
+                                <td>david@example.com</td>
+                                <td><span class="method-badge method-badge--bank">Bank</span></td>
+                                <td>KES 50,000</td>
+                                <td class="tx-code">BNK7890</td>
+                                <td><span class="privacy-badge privacy-badge--public">Public</span></td>
+                                <td><span class="status-badge status-badge--verified">Verified</span></td>
+                                <td>
+                                    <button class="action-btn action-btn--disabled" disabled>Verified</button>
+                                </td>
+                            </tr>
+                            <!-- Mock Data Row 4 (Verified PayPal) -->
+                            <tr>
+                                <td>Sarah Jenkins</td>
+                                <td>s.jenkins@example.com</td>
+                                <td><span class="method-badge method-badge--paypal">PayPal</span></td>
+                                <td>USD $100</td>
+                                <td class="tx-code">PAY334455</td>
+                                <td><span class="privacy-badge privacy-badge--anonymous">Anonymous</span></td>
+                                <td><span class="status-badge status-badge--verified">Verified</span></td>
+                                <td>
+                                    <button class="action-btn action-btn--disabled" disabled>Verified</button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- Lucide Icons -->
+    <script src="https://kit.fontawesome.com/c151b27f34.js" crossorigin="anonymous"></script>
+    <script src="assets/admin.js"></script>
+</body>
+</html>

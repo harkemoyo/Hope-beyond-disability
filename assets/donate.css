@@ -114,3 +114,255 @@
     margin-top: 12px;
 }
 
+/* Verification Form Container */
+.verification-form-container {
+    background: var(--light-bg-1, #ffffff);
+    padding: 32px;
+    border-radius: 20px;
+    border: 1px solid rgba(18, 18, 18, 0.05);
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.04);
+    margin-top: 24px;
+}
+
+.verification-form__header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 8px;
+}
+
+.verification-form__icon {
+    font-size: 2.4rem;
+    color: var(--primary-gold-hover, #FBC02D);
+}
+
+.verification-form__title {
+    font-family: var(--font-heading, 'Roboto Slab', serif);
+    font-size: 2.2rem;
+    color: var(--text-dark, #121212);
+    margin: 0;
+}
+
+.verification-form__subtitle {
+    font-size: 1.5rem;
+    color: var(--text-muted-dark, #555);
+    margin-bottom: 24px;
+    line-height: 1.5;
+}
+
+/* Floating Label Inputs */
+.verification-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form-row {
+    display: flex;
+    gap: 16px;
+}
+
+.form-row .form-group {
+    flex: 1;
+}
+
+.form-group {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.form-control {
+    width: 100%;
+    padding: 16px 16px 12px;
+    font-size: 1.6rem;
+    font-family: inherit;
+    color: var(--text-dark, #121212);
+    background-color: #f9f9f9;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    outline: none;
+    box-sizing: border-box;
+}
+
+.form-control:focus {
+    background-color: #fff;
+    border-color: var(--primary-red, #D32F2F);
+    box-shadow: 0 0 0 4px rgba(211, 47, 47, 0.1);
+}
+
+.form-label {
+    position: absolute;
+    left: 16px;
+    top: 14px;
+    font-size: 1.5rem;
+    color: #888;
+    pointer-events: none;
+    transition: all 0.2s ease-out;
+}
+
+/* Floating effect */
+.form-control:focus ~ .form-label,
+.form-control:not(:placeholder-shown) ~ .form-label {
+    top: -10px;
+    left: 12px;
+    font-size: 1.2rem;
+    background-color: #fff;
+    padding: 0 6px;
+    color: var(--primary-red, #D32F2F);
+    border-radius: 4px;
+}
+
+/* Specific fix for select */
+select.form-control {
+    padding-top: 14px;
+    padding-bottom: 14px;
+}
+
+.form-label--static {
+    top: -10px;
+    left: 12px;
+    font-size: 1.2rem;
+    background-color: #fff;
+    padding: 0 6px;
+    color: #888;
+    border-radius: 4px;
+}
+
+/* Checkbox Styling */
+.form-checkbox {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    margin-top: 4px;
+    margin-bottom: 8px;
+}
+
+.form-checkbox input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+    accent-color: var(--primary-red, #D32F2F);
+    cursor: pointer;
+    margin-top: 2px;
+}
+
+.form-checkbox label {
+    font-size: 1.4rem;
+    color: var(--text-muted-dark, #555);
+    cursor: pointer;
+    line-height: 1.4;
+}
+
+/* Animated Submit Button */
+.btn--animated {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    padding: 16px;
+    font-size: 1.6rem;
+    font-weight: 600;
+    border-radius: 8px;
+    transition: transform 0.2s, box-shadow 0.2s, background-color 0.2s;
+    margin-top: 8px;
+}
+
+.btn--animated:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(211, 47, 47, 0.25);
+}
+
+.btn--animated i {
+    transition: transform 0.3s ease;
+}
+
+.btn--animated:hover i {
+    transform: translateX(4px);
+}
+
+/* PayPal Button */
+.btn--paypal {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    background-color: #FFC439;
+    color: #003087;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-weight: bold;
+    font-size: 1.6rem;
+    padding: 14px 24px;
+    border-radius: 50px;
+    text-decoration: none;
+    transition: background-color 0.2s, transform 0.2s;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.btn--paypal:hover {
+    background-color: #F2BA36;
+    transform: translateY(-1px);
+}
+
+/* STK Push Specific Styles */
+.stk-push-card {
+    border: 2px solid var(--primary-gold, #FBC02D);
+    background: linear-gradient(145deg, #ffffff, #fdfbf7);
+}
+
+.hidden {
+    display: none !important;
+}
+
+.stk-loading-state {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.stk-spinner {
+    font-size: 48px;
+    color: var(--primary-gold-hover, #FBC02D);
+    margin-bottom: 24px;
+}
+
+.stk-loading-title {
+    font-family: var(--font-heading, 'Roboto Slab', serif);
+    font-size: 2.4rem;
+    color: var(--text-dark, #121212);
+    margin: 0 0 12px 0;
+}
+
+.stk-loading-text {
+    font-size: 1.6rem;
+    color: var(--text-muted-dark, #555);
+    line-height: 1.5;
+    margin-bottom: 24px;
+}
+
+.btn--text {
+    background: transparent;
+    border: none;
+    color: var(--text-muted-dark, #555);
+    font-size: 1.4rem;
+    font-weight: 600;
+    cursor: pointer;
+    text-decoration: underline;
+    transition: color 0.2s;
+    padding: 8px;
+}
+
+.btn--text:hover {
+    color: var(--primary-red, #D32F2F);
+}
+
+@media (max-width: 768px) {
+    .form-row {
+        flex-direction: column;
+        gap: 20px;
+    }
+}

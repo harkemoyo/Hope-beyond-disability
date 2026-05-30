@@ -39,16 +39,18 @@
 
    
 
-    <!-- Page Header -->
-    <section class="page-header page-header--has-image page-header--donate">
-        <h1 class="page-header__title">Support Our Work</h1>
-        <p class="page-header__subtitle">Your generous contribution directly funds skills training, medical support, advocacy campaigns, and Christian fellowship for families and caregivers of children living with disabilities.</p>
-    </section>
+  
 
     <!-- Page Content -->
     <main class="page-content-wrapper">
-        
-        <div class="grid grid--2col-reverse">
+          <!-- Page Header -->
+        <section class="page-header page-header--has-image page-header--donate">
+            <h1 class="page-header__title">Support Our Work</h1>
+            <p class="page-header__subtitle">Your generous contribution directly funds skills training, medical support, advocacy campaigns, and Christian fellowship for families and caregivers of children living with disabilities.</p>
+        </section>
+
+
+        <section class="section-container-50 grid grid--2col-reverse">
             <!-- Left Info Panel -->
             <div class="content-section">
                 <h2>Your Impact</h2>
@@ -65,33 +67,132 @@
                     </ul>
                 </div>
 
-                <!-- Receipt Instructions -->
-                <div class="value-card value-card--gold-tint">
-                    <strong class="value-card__title">Confirming Your Gift</strong>
-                    <p>
-                        After making your contribution, please send a screenshot of the M-Pesa confirmation message or details of your bank transfer via WhatsApp to <a href="https://wa.me/254700000000" target="_blank" rel="noopener noreferrer" class="text-link">+254 700 000 000</a> or email <a href="mailto:info@hopebeyonddisability.org" class="text-link">info@hopebeyonddisability.org</a> so we can send you an official donation receipt and acknowledgment.
-                    </p>
+                <!-- Manual Donation Verification Form -->
+                <div style="display: none;" class="verification-form-container" style="margin-top: 32px;">
+                    <div class="verification-form__header">
+                        <i class="fa-solid fa-receipt verification-form__icon" style="color: var(--primary-gold-hover);"></i>
+                        <h3 class="verification-form__title">Claim Your Receipt</h3>
+                    </div>
+                    <p class="verification-form__subtitle">Did you use the manual Paybill or Bank Transfer? Please share your details below so we can securely send your official receipt.</p>
+                    <form class="verification-form" action="#" method="POST" onsubmit="event.preventDefault(); alert('Thank you! Your details have been securely submitted.');">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <input type="text" id="manualDonorName" class="form-control" required placeholder=" ">
+                                <label for="manualDonorName" class="form-label">Full Name</label>
+                            </div>
+                            <div class="form-group">
+                                <input type="email" id="manualDonorEmail" class="form-control" required placeholder=" ">
+                                <label for="manualDonorEmail" class="form-label">Email Address</label>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <select id="manualPaymentMethod" class="form-control" required>
+                                    <option value="" disabled selected>Select Method</option>
+                                    <option value="mpesa">M-Pesa (Manual Paybill)</option>
+                                    <option value="bank">Bank Transfer</option>
+                                </select>
+                                <label for="manualPaymentMethod" class="form-label form-label--static">Payment Method</label>
+                            </div>
+                            <div class="form-group">
+                                <input type="number" id="manualDonationAmount" class="form-control" required placeholder=" ">
+                                <label for="manualDonationAmount" class="form-label">Amount</label>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" id="manualTransactionCode" class="form-control" required placeholder=" ">
+                            <label for="manualTransactionCode" class="form-label">Transaction ID / Code</label>
+                        </div>
+                        <div class="form-checkbox">
+                            <input type="checkbox" id="manualIsAnonymous" name="manualIsAnonymous">
+                            <label for="manualIsAnonymous">Make my donation anonymous (Your details remain private)</label>
+                        </div>
+                        <button type="submit" class="btn btn--primary btn--full btn--animated">
+                            <span>Send Details Securely</span>
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </button>
+                    </form>
                 </div>
             </div>
 
             <!-- Right Payment Panel -->
             <div class="flex-flow-col">
-                <h2>How to Give</h2>
+                <h2>Donate Now</h2>
                 
-                <!-- Card Option 1: Mobile Money (M-Pesa Kenya) -->
+                <!-- Automated M-Pesa STK Push Form -->
+                <div style="display: none;" class="payment-card stk-push-card" id="stkFormContainer">
+                    <h3 class="payment-card__title">
+                        <i class="fa-solid fa-mobile-screen-button icon--gold"></i> Pay via M-Pesa
+                    </h3>
+                    
+                    <div id="stkInputSection">
+                        <p class="payment-card__note" style="margin-top: 0; margin-bottom: 20px;">Fast, secure, and automatic. Enter your details and the PIN prompt will appear directly on your phone.</p>
+                        
+                        <form class="verification-form" id="stkPushForm" onsubmit="handleStkPush(event)">
+                            <div class="form-group">
+                                <input type="text" id="donorName" class="form-control" required placeholder=" ">
+                                <label for="donorName" class="form-label">Full Name</label>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <input type="tel" id="donorPhone" class="form-control" required placeholder=" ">
+                                    <label for="donorPhone" class="form-label">M-Pesa Number</label>
+                                </div>
+                                <div class="form-group">
+                                    <input type="number" id="donationAmount" class="form-control" required placeholder=" ">
+                                    <label for="donationAmount" class="form-label">Amount (KES)</label>
+                                </div>
+                            </div>
+                            <div class="form-checkbox">
+                                <input type="checkbox" id="isAnonymous" name="isAnonymous">
+                                <label for="isAnonymous">Make my donation anonymous</label>
+                            </div>
+                            <button type="submit" class="btn btn--primary btn--full btn--animated" id="stkSubmitBtn">
+                                <span>Send M-Pesa Prompt</span>
+                                <i class="fa-solid fa-paper-plane"></i>
+                            </button>
+                        </form>
+                    </div>
+
+                    <!-- STK Loading State (Hidden by default) -->
+                    <div id="stkLoadingSection" class="stk-loading-state hidden">
+                        <div class="stk-spinner">
+                            <i class="fa-solid fa-circle-notch fa-spin"></i>
+                        </div>
+                        <h4 class="stk-loading-title">Awaiting PIN...</h4>
+                        <p class="stk-loading-text">Please check your phone. An M-Pesa prompt has been sent to your number. Enter your PIN to complete the donation.</p>
+                        <button type="button" class="btn btn--text" onclick="resetStkForm()">Cancel / Try Again</button>
+                    </div>
+                </div>
+
+                <!-- Card Option 1.5: Manual M-Pesa Paybill -->
                 <div class="payment-card">
                     <h3 class="payment-card__title">
-                        <i class="fa-solid fa-mobile-screen-button icon--gold"></i>Mobile Money (M-Pesa)
+                        <i class="fa-solid fa-money-bill-transfer icon--gold"></i>Manual M-Pesa (Paybill)
                     </h3>
                     <div class="payment-card__body">
                         <div>
-                            <p class="payment-card__step-text">1. Go to M-Pesa > Lipa na M-Pesa > Paybill</p>
-                            <p class="payment-card__step-text">2. Enter Business Number (Paybill):</p>
+                            <p class="payment-card__step-text">Prefer to do it manually? Go to M-Pesa > Lipa na M-Pesa > Paybill</p>
+                            <p class="payment-card__step-text" style="margin-top: 12px;">Business Number (Paybill):</p>
                             <p class="payment-code payment-code--red">600100</p>
-                            <p class="payment-card__step-text">3. Enter Account Number:</p>
+                            <p class="payment-card__step-text">Account Number:</p>
                             <p class="payment-code payment-code--gold">202509</p>
                             <p class="payment-card__note">Account name will display as: <strong>HOPE BEYOND DISABILITY</strong></p>
+                            <p class="payment-card__note" style="margin-top: 12px; color: var(--primary-red);"><i class="fa-solid fa-circle-info"></i> Don't forget to claim your receipt using the form on the left!</p>
                         </div>
+                    </div>
+                </div>
+
+                <!-- Card Option 2: PayPal -->
+                <div class="payment-card">
+                    <h3 class="payment-card__title">
+                        <i class="fa-brands fa-paypal" style="color: #00457C;"></i>PayPal
+                    </h3>
+                    <div class="payment-card__body">
+                        <p class="payment-card__note" style="margin-top: 0; margin-bottom: 16px;">Fast and secure international payments. Use your credit card or PayPal account.</p>
+                        <a href="https://paypal.com/donate" target="_blank" rel="noopener noreferrer" class="btn btn--paypal">
+                            <i class="fa-brands fa-paypal"></i> Donate with PayPal
+                        </a>
                     </div>
                 </div>
 
@@ -194,6 +295,31 @@
     </footer>
 </div>
 
+    <!-- JS logic for STK Push -->
+    <script>
+        function handleStkPush(event) {
+            event.preventDefault();
+            
+            // Hide input form
+            document.getElementById('stkInputSection').classList.add('hidden');
+            
+            // Show loading state
+            document.getElementById('stkLoadingSection').classList.remove('hidden');
+            
+            // Note: In production, this is where you'd fire the API call to your backend gateway
+        }
+
+        function resetStkForm() {
+            // Hide loading state
+            document.getElementById('stkLoadingSection').classList.add('hidden');
+            
+            // Show input form
+            document.getElementById('stkInputSection').classList.remove('hidden');
+            
+            // Reset form fields
+            document.getElementById('stkPushForm').reset();
+        }
+    </script>
     <!-- Lucide Icons script -->
     <script src="assets/script.js" defer></script>
 </body>
