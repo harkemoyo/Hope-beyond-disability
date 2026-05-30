@@ -78,7 +78,7 @@ body {
     font-weight: var(--font-body-weight);
     background-color: var(--bg-base);
     color: var(--text-main);
-    overflow-x: hidden;
+    overflow-x: clip;
 }
 
 .container {
@@ -214,6 +214,79 @@ p{
 
 .navbar__link:hover::after {
     width: 100%;
+}
+
+/* Reusable Navbar Dropdown Component (Desktop) */
+.navbar__dropdown {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+}
+
+.navbar__dropdown-toggle {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    cursor: pointer;
+}
+
+.navbar__dropdown-icon {
+    font-size: 1rem;
+    vertical-align: middle;
+    transition: transform 0.3s ease;
+}
+
+.navbar__dropdown:hover .navbar__dropdown-icon {
+    transform: rotate(180deg);
+}
+
+.navbar__dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%) translateY(10px);
+    background: var(--light-bg-1);
+    border: 1px solid rgba(18, 18, 18, 0.05);
+    border-radius: 8px;
+    padding: 8px 0;
+    min-width: 180px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    z-index: 200;
+}
+
+/* Invisible hover bridge */
+.navbar__dropdown-menu::before {
+    content: '';
+    position: absolute;
+    top: -15px;
+    left: 0;
+    right: 0;
+    height: 15px;
+}
+
+.navbar__dropdown:hover .navbar__dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(-50%) translateY(4px);
+}
+
+.navbar__dropdown-item {
+    display: block;
+    padding: 10px 20px;
+    font-size: 1.52rem;
+    font-weight: 500;
+    color: var(--text-dark);
+    text-decoration: none;
+    transition: background 0.2s ease, color 0.2s ease;
+    white-space: nowrap;
+}
+
+.navbar__dropdown-item:hover {
+    background: var(--light-bg-2);
+    color: var(--primary-red);
 }
 
 .navbar__toggle {
@@ -496,12 +569,10 @@ p{
 }
 
 /* Sticky secondary column utility — add .sticky-col to whichever column is shorter */
-@media (min-width: 769px) {
-    .sticky-col {
-        position: sticky;
-        top: 9rem; /* Clears the fixed navbar with breathing room */
-        align-self: start;
-    }
+.sticky-col {
+    position: sticky;
+    top: 140px; /* Clears the fixed navbar with breathing room */
+    align-self: start;
 }
 
 /* Page Header Block */
@@ -846,8 +917,12 @@ p{
 }
 
 /* Scroll Offset for Fixed Navbar Target Anchors */
+html {
+    scroll-padding-top: 140px;
+}
+
 section[id] {
-    scroll-margin-top: 100px;
+    scroll-margin-top: 140px;
 }
 
 /* Animations */
@@ -1005,6 +1080,71 @@ section[id] {
     .navbar__links .navbar__link:hover {
         color: var(--primary-red) !important;
         padding-left: 8px;
+    }
+
+    /* Mobile Dropdown styles */
+    .navbar__dropdown {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .navbar__dropdown-menu {
+        max-height: 0;
+        overflow: hidden;
+        opacity: 0;
+        visibility: hidden;
+        transition: max-height 0.4s ease, opacity 0.4s ease, padding 0.4s ease, visibility 0.4s ease;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+        border: 1px solid rgba(18, 18, 18, 0.05);
+        border-radius: 8px;
+        padding: 0 16px;
+        margin-left: 0;
+        margin-top: 0;
+        min-width: auto;
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        z-index: auto;
+        background: #ffffff;
+    }
+
+    .navbar__dropdown.is-active .navbar__dropdown-menu {
+        max-height: 500px;
+        opacity: 1;
+        visibility: visible;
+        padding: 16px;
+        margin-top: 8px;
+    }
+
+    .navbar__links .navbar__dropdown-item {
+        color: var(--text-muted-dark) !important;
+        font-family: var(--font-body);
+        font-size: 1.6rem;
+        font-weight: 500;
+        padding-block: 6px;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+        transition: color 0.2s ease, padding-left 0.2s ease;
+        border-bottom: none !important;
+    }
+    
+    .navbar__links .navbar__dropdown-item:hover {
+        color: var(--primary-red) !important;
+        padding-left: 6px;
+    }
+
+    .navbar__dropdown-icon {
+        display: inline-block;
+        transition: transform 0.3s ease;
+        margin-left: 8px;
+    }
+    
+    .navbar__dropdown.is-active .navbar__dropdown-icon {
+        transform: rotate(180deg);
     }
     
     .grid--2col, .grid--3col, .grid--4col, .grid--2col-wide, .grid--2col-reverse {

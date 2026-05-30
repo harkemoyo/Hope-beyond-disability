@@ -24,7 +24,15 @@
             <nav class="navbar__links">
                 <a href="index.html" class="navbar__link">Home</a>
                 <a href="about.html" class="navbar__link">About Us</a>
-                <a href="programs.html" class="navbar__link">Programs</a>
+                <div class="navbar__dropdown">
+                    <a href="programs.html" class="navbar__link navbar__dropdown-toggle">Our Impact <i class="fa-solid fa-chevron-down navbar__dropdown-icon"></i></a>
+                    <div class="navbar__dropdown-menu">
+                        <a href="programs.html#discipleship" class="navbar__dropdown-item">Discipleship</a>
+                        <a href="programs.html#advocacy" class="navbar__dropdown-item">Advocacy</a>
+                        <a href="programs.html#awareness" class="navbar__dropdown-item">Awareness</a>
+                        <a href="programs.html#empowerment" class="navbar__dropdown-item">Empowerment</a>
+                    </div>
+                </div>
                 <a href="partnerships.html" class="navbar__link">Partnerships</a>
                 <a href="donate.html" class="navbar__link">Donate</a>
                 <a href="contact.html" class="navbar__link">Contact</a>
@@ -48,7 +56,7 @@
     </section>
         <!-- 1. Discipleship -->
         <section id="discipleship" class="why-it-matters">
-            <div class="section-container-50 align-start">
+            <div class="section-container-50 align-start grid--2col">
                 <div class="section-text-col">
                     <div class="card-icon card-icon--red">
                         <i class="fa-solid fa-heart"></i>
@@ -86,7 +94,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="section-img-col">
+                <div class="section-img-col sticky-col">
                     <img src="assets/images/discipleship_circle.webp" alt="Supportive family discipleship circle" class="section-image">
                 </div>
             </div>
@@ -94,7 +102,7 @@
 
         <!-- 2. Advocacy -->
         <section id="advocacy" class="identity-section">
-            <div class="section-container-50 align-start">
+            <div class="section-container-50 align-start grid--2col">
                 <div class="section-text-col">
                     <div class="card-icon card-icon--red">
                         <i class="fa-solid fa-bullhorn"></i>
@@ -137,7 +145,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="section-img-col">
+                <div class="section-img-col sticky-col">
                     <img src="assets/images/advocacy_meeting.webp" alt="Advocacy workshop discussion" class="section-image">
                 </div>
             </div>
@@ -145,7 +153,7 @@
 
         <!-- 3. Awareness -->
         <section id="awareness" class="why-it-matters">
-            <div class="section-container-50 align-start">
+            <div class="section-container-50 align-start grid--2col">
                 <div class="section-text-col">
                     <div class="card-icon card-icon--red">
                         <i class="fa-solid fa-eye"></i>
@@ -188,7 +196,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="section-img-col">
+                <div class="section-img-col sticky-col">
                     <img src="assets/images/awareness_workshop.webp" alt="Disability inclusion community awareness presentation" class="section-image">
                 </div>
             </div>
@@ -196,7 +204,7 @@
 
         <!-- 4. Empowerment -->
         <section id="empowerment" class="identity-section">
-            <div class="section-container-50 align-start">
+            <div class="section-container-50 align-start grid--2col">
                 <div class="section-text-col">
                     <div class="card-icon card-icon--red">
                         <i class="fa-solid fa-wrench"></i>
@@ -239,8 +247,8 @@
                         </div>
                     </div>
                 </div>
-                <div class="section-img-col">
-                    <img src="assets/images/empowerment_training.webp" alt="Skills training session for caregivers" class="section-image">
+                <div class="section-img-col sticky-col">
+                    <img src="assets/images/empowerment_training.webp" alt="Caregiver empowerment and skills training" class="section-image">
                 </div>
             </div>
         </section>
